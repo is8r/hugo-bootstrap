@@ -1,0 +1,22 @@
+$fa-font-path: '../fonts';
+@import 'node_modules/font-awesome/scss/font-awesome';
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "node_modules/spuit/spuit";
+
+@import 'styles/config/variables';
+@import 'styles/config/mixins';
+
+// basic styles
+
+html {
+  font-size: 100%;
+  @include breakpoint-down(md) {
+    font-size: 80%;
+  }
+}
+
+body {
+  @include font(1rem);
+  color: $color-black;
+}

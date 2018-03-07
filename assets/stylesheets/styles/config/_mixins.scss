@@ -1,0 +1,40 @@
+@mixin font($size: 1rem, $line-height: normal, $weight: 400) {
+  font-family: $font-yu;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin font-serif($size: 1rem, $line-height: normal, $weight: 400) {
+  font-family: $font-yumin;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $line-height;
+}
+
+@mixin button {
+  @include font;
+  @include button-normal;
+}
+
+@mixin input {
+  @include font;
+  @include input-normal(100%);
+}
+
+@mixin table {
+  @include font(1rem);
+  @include table-normal;
+}
+
+@at-root {
+  // animation: anim-wave 1.0s linear infinite
+  @keyframes anim-wave {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -1440px 0;
+    }
+  }
+}

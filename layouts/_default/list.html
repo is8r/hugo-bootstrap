@@ -1,0 +1,24 @@
+{{ define "main" }}
+
+{{ if . }}
+<h1>{{ .Title }}</h2>
+{{ end }}
+
+{{ range sort .Paginator.Pages }}
+<article>
+  <h1><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} <small>::Draft</small> {{ end }}</h1>
+  {{ partial "parts/info" . }}
+
+  <div class="content">
+    {{ .Summary | plainify | safeHTML }}
+
+    {{ if .Truncated }}
+    <a href="{{ .Permalink }}" class="more">Read more</a>
+    {{ end }}
+  </div>
+</article>
+{{ end }}
+
+{{ partial "parts/pagenator" . }}
+
+{{ end }}
