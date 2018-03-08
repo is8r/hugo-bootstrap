@@ -1,13 +1,9 @@
-色々インストールする:
+## How to Use
+
+インストール:
 
 ```
-$ npm install
-```
-
-gulpを立ち上げる:
-
-```
-$ gulp
+$ git submodule add git@github.com:is8r/hugo-bootstrap.git themes/hugo-bootstrap
 ```
 
 config.tomlの例:
@@ -31,4 +27,15 @@ post = "/:year/:month/:title/"
 [taxonomies]
 tag = "tags"
 category = "categories"
+```
+
+あと、packege.jsonに追加しておくと便利:
+
+```
+{
+  "scripts": {
+    "hugo": "open http://localhost:1313/ && hugo server -D --watch",
+    "dev": "cd ./themes/hugo-bootstrap && npm install && gulp"
+  }
+}
 ```
