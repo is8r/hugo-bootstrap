@@ -1,0 +1,49 @@
+.amazon {
+  a {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+    line-height: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    img {
+      width: 25%;
+      height: auto;
+      margin-right: 1rem;
+    }
+
+    .title, .name {
+      display: block;
+    }
+
+    .name {
+      padding-top: 10px;
+    }
+
+    &::before {
+      // @include fa;
+      content: '\f270';
+      font-size: 1.0rem;
+      position: absolute;
+      left: -5rem;
+      text-align: right;
+      width: 4rem;
+      margin-top: 0.3rem;
+      color: #ddd;
+      opacity: 1;
+    }
+
+    &:hover {
+      color: $color-blue;
+      border-color: $color-blue;
+      &::before {
+        color: $color-blue;
+      }
+    }
+  }
+}

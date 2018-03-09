@@ -7,6 +7,9 @@ $fa-font-path: '../fonts';
 @import 'styles/config/variables';
 @import 'styles/config/mixins';
 
+@import 'styles/components/amazon';
+@import 'styles/components/blockquote';
+
 // basic styles
 
 html {
