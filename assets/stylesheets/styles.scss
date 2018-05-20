@@ -1,4 +1,4 @@
-$fa-font-path: '../fonts';
+$fa-font-path: '/fonts';
 @import 'node_modules/font-awesome/scss/font-awesome';
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -7,8 +7,7 @@ $fa-font-path: '../fonts';
 @import 'styles/config/variables';
 @import 'styles/config/mixins';
 
-@import 'styles/components/amazon';
-@import 'styles/components/blockquote';
+@import 'styles/components/card';
 
 // basic styles
 
@@ -23,3 +22,540 @@ body {
   @include font(1rem);
   color: $color-black;
 }
+
+.modal {
+  .modal-dialog {
+    margin-top: -1px;
+    max-width: 700px;
+
+    .modal-content {
+      border-radius: 0 0 .3rem .3rem;
+    }
+  }
+
+  input {
+    @include input;
+    margin: 0;
+  }
+  ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    &:empty {
+      display: none;
+    }
+  }
+  #search-results {
+    h5 {
+      @include font(1.4rem, 2.4rem);
+      a {
+        color: $color-blue;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $color-blue;
+        }
+      }
+    }
+    p {
+      @include font(.75rem);
+      color: $color-gray;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}
+
+.btn {
+  @include button;
+}
+
+.header {
+  a {
+    @include font(1rem, 1.8rem);
+    color: $color-black;
+
+    &:hover {
+      color: $color-blue;
+      text-decoration: none;
+    }
+  }
+}
+
+.entries {
+  &__item {
+    padding-bottom: 20px;
+
+    h1, h1 a {
+      @include font(1.4rem, 2.4rem);
+    }
+    a {
+      color: $color-blue;
+    }
+    h1 {
+      a {
+        text-decoration: none;
+        padding-bottom: .3rem;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $color-blue;
+        }
+      }
+    }
+  }
+  &__item-content {
+    color: $color-gray;
+  }
+}
+
+.entry {
+  h1, h1 a {
+    @include font(1.8rem, 2.8rem);
+  }
+
+  a {
+    color: $color-blue;
+  }
+
+  p, a {
+    @include font(.9125rem, 2rem);
+  }
+
+  &__content {
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.info {
+  @include font(.75rem, 1);
+  color: $color-gray;
+  padding-bottom: 10px;
+
+  a {
+    @include font(.75rem, 1);
+  }
+}
+
+.profile {
+  &__info {
+    margin: 10px 0 20px;
+
+    p {
+      @include font(.75rem);
+      margin-bottom: 5px;
+    }
+  }
+
+  &__links {
+    list-style: none;
+
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        font-size: .6125rem !important;
+        color: $color-black !important;
+        background: #f2f2f2;
+        border-radius: 30px;
+        text-align: center;
+        padding: 2px 10px;
+
+        &:hover {
+          text-decoration: none;
+          background: $color-blue;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+
+.widget {
+  padding-bottom: 40px;
+
+  h5 {
+    @include font(.6125rem, 1);
+    color: #ddd;
+    text-transform: uppercase;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      @include font(.6125rem, 1);
+      color: $color-gray;
+      padding-bottom: 10px;
+      a {
+        @include font(.875rem, 1.6rem);
+        color: $color-black;
+
+        &:hover {
+          color: $color-blue;
+
+        }
+      }
+    }
+  }
+}
+
+.pagenator {
+  text-align: center;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline-block;
+      padding: 0 .5rem;
+      a {
+        @include font(1rem, 1);
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+.breadcrumbs {
+  margin-bottom: 1rem;
+  ol {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li {
+      @include font(.75rem);
+      display: inline-block;
+      color: $color-gray;
+
+      &:before {
+        content: '>';
+      }
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      a {
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+.related {
+  padding: 1rem 0;
+
+  ul {
+    li {
+      display: inline-block;
+      a {
+        display: inline-block;
+        border: 1px solid #eee;
+        padding: 10px 10px;
+
+        &:hover {
+          text-decoration: none;
+          border-color: $color-blue;
+        }
+      }
+    }
+  }
+}
+
+.nextback {
+  > a {
+    display: block;
+    border: 1px solid #eee;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+    &:hover {
+      text-decoration: none;
+      border-color: $color-blue;
+    }
+  }
+}
+
+.previews {
+  $c: #f8f8f8;
+  margin: 2rem 0;
+
+  h5 {
+    @include font(.6125rem, 1);
+    color: #ddd;
+    text-transform: uppercase;
+  }
+
+  ul {
+    display: flex;
+    padding: 40px;
+    border-radius: 10px;
+    background: $c;
+    list-style: none;
+    @include breakpoint-down(md) {
+      padding: 20px;
+      justify-content: center;
+    }
+    li {
+      margin: 40px;
+      max-height: 600px;
+      overflow: hidden;
+      @include wordwrap-fadeout(60px, 0, $c);
+      @include breakpoint-down(md) {
+        margin: 20px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+//
+// //NOTE that the variable names are my own. You will obviously need to adjust according to how you design your sass variables.scss file. Honestly, you will probably want to write your own styling, especially since the variables and mixins are my own, but I'm throwing this in for good measure. The icon-* classes reflect [fontello](http://fontello.com/), which I used to reduce the overhead of including larger libraries like Font Awesome.
+//
+// #search-button {
+//     display: inline;
+//     color: $base-font-color;
+//     background-color: $top-bar-background-color;
+//     font-size: $top-bar-height/4;
+//     height: $top-bar-height;
+//     line-height: $top-bar-height;
+//     cursor: pointer;
+//     position: absolute;
+//     top: 0px;
+//     right: $top-bar-height/4;
+//     transition: all .3s ease-in-out;
+//     &:hover {
+//         color: $brand;
+//         span {
+//             color: $brand;
+//             em {
+//                 color: $brand;
+//                 border-color: $brand;
+//             }
+//         }
+//     }
+//     span {
+//         display: none;
+//         @include MQ(L) {
+//             display: inline;
+//             height: $top-bar-height/2;
+//             line-height: $top-bar-height/2;
+//         }
+//     }
+//     em {
+//         font-family: "Lucida Console", "Courier New", courier, monaco, monospace;
+//         font-style: normal;
+//         font-weight: 100;
+//         border: 1px solid lighten($base-font-color, 35%);
+//         padding: .25em;
+//         border-radius: 3px;
+//         color: $base-font-color;
+//     }
+//     i.icon-search {
+//         font-size: 2em;
+//         @include MQ(L){
+//             font-size:1.5em;
+//         }
+//     }
+// }
+//
+// form.search-form {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%!important;
+//     width: 100vw!important;
+//     height: 100%;
+//     height: 100vh;
+//     display: none;
+//     overflow-y: scroll;
+//     &.open {
+//         display: block;
+//         z-index: 999;
+//         background-color: white;
+//     }
+//     input#search-input {
+//         display: block;
+//         width: 90%;
+//         margin-left: 5%;
+//         margin-top: 1.5em;
+//         @include MQ(L) {
+//             width: 70%;
+//             max-width: 70%;
+//             margin-left: auto;
+//             margin-right: auto;
+//             margin-top: 2rem;
+//             font-size: 2rem;
+//         }
+//     }
+// }
+//
+// div.press-escape {
+//     display: none;
+//     @include MQ(L) {
+//         display: block;
+//         position: absolute;
+//         margin-top: 20px;
+//         font-size: 16px;
+//         bottom: 25px;
+//         left: calc(50% - 100px);
+//         right: calc(50% - 100px);
+//         width: 200px;
+//         em {
+//             font-family: "Lucida Console", "Courier New", courier, monaco, monospace;
+//             font-style: normal;
+//             font-weight: 100;
+//             position: relative;
+//             font-size: .7em;
+//             border: 1px solid lighten($base-font-color, 35%);
+//             border-radius: 3px;
+//             color: $base-font-color;
+//             top: -.67em;
+//             padding: .25em .5em 1.5em;
+//         }
+//     }
+// }
+//
+// #close-search {
+//     width: 18px;
+//     position: fixed;
+//     top: 20px;
+//     right: 30px;
+//     z-index: 999;
+// }
+//
+// ul#search-results {
+//     display: block;
+//     width: 90%;
+//     margin-left: 5%;
+//     margin-top: 1.5em;
+//     padding-left: 0;
+//     @include MQ(L) {
+//         width: 70%;
+//         margin-left: auto;
+//         margin-right: auto;
+//         margin-top: 2rem;
+//     }
+//     li {
+//         list-style: none inside none;
+//         border: 1px solid $search-result-border-color;
+//         position: relative;
+//         display: block;
+//         height: 100%;
+//         margin-left: 0;
+//         margin-bottom: .75em;
+//         padding-left: 0;
+//         z-index: 999;
+//         margin-left: -10px;
+//         margin-right: -10px;
+//         a {
+//             &:hover {
+//                 cursor: pointer!important;
+//             }
+//             &:focus {
+//                 h5 {
+//                     background-color: $search-result-title-background-color-hover;
+//                     margin-left: -1px;
+//                     width: calc(100% + 2px);
+//                 }
+//             }
+//         }
+//         h5 {
+//             transition: all .2s ease-in-out;
+//             background-color: $search-result-title-background-color;
+//             color: white;
+//             margin-top: -1px;
+//             padding-top: -1px;
+//             padding-left: 10px;
+//             padding-right: 10px;
+//             font-weight: bold;
+//             &:hover,
+//             &:focus,
+//             &:active {
+//                 cursor: pointer!important;
+//                 background-color: $search-result-title-background-color-hover;
+//                 margin-left: -1px;
+//                 width: calc(100% + 2px);
+//             }
+//         }
+//         div.in-section {
+//             display: block;
+//             width: 100%;
+//             padding-left: 10px;
+//             font-size: .75em;
+//             display: inline-block;
+//             color: black;
+//             font-weight: bold;
+//         }
+//         p {
+//             flex-grow: 1;
+//             padding-left: 10px;
+//             padding-right: 10px;
+//             margin-top: 5px;
+//             margin-bottom: 0px;
+//         }
+//         //see _icons.scss for span.tags-icon
+//         &.none {
+//             border: 3px solid $warning-color;
+//             padding-left: 10px;
+//         }
+//     }
+//     ul.tags {
+//         display: none;
+//         @include MQ(M) {
+//             display: flex;
+//             margin-bottom: .5rem;
+//             margin-top: .5rem;
+//             width: 100%;
+//             padding-left: 10px;
+//             justify-content: flex-end;
+//             li {
+//                 display:none;
+//                 @include MQ(M){
+//                     display:inline;
+//                 }
+//                 border: 0px;
+//                 margin: 0 5px;
+//                 padding: 0;
+//                 //fontello icon
+//                 .icon-tags {
+//                     color: $cap-black;
+//                 }
+//                 //only show mobile-plus size since tags are hidden in search overlay for mobile.
+//                 a.tag {
+//                     font-size: $tag-font-size-tablet-plus;
+//                     background-color: $tag-background-color;
+//                     color: $tag-font-color;
+//                     &:hover {
+//                         background-color:$tag-background-color-hover;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+//
+// i.icon-cancel {
+//     color: $white;
+//     font-size: 1.2rem;
+//     background-color: $base-font-color;
+//     border-radius: 50%;
+// }
+//
+// span.input-value {
+//     color: $warning-color;
+//     font-weight: bold;
+//     font-style: italic;
+// }

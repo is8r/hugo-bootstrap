@@ -4,8 +4,8 @@
   <ul>
     {{ range $value := (where .Site.RegularPages "Type" "post").GroupByDate "2006-01" }}
     {{ $url := (index $value.Pages 0).Date.Format "2006-01" | urlize }}
-    <li class="archive-list-item">
-      <a class="archive-list-link" href="{{ $.Site.BaseURL }}post/#{{ $url }}">{{ .Key }}</a>
+    <li>
+      <a href="{{ $.Site.BaseURL }}post/#{{ $url }}">{{ .Key }}</a>
       <span class="count">({{ len $value.Pages }})</span>
     </li>
     {{ end }}
