@@ -1,14 +1,21 @@
 {{ partial "head" . }}
-{{ partial "header" . }}
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
   <div class="row">
-    <div class="col-12 col-md-8 mb-5">
+    <div class="col-12 col-md-3">
+      {{ partial "header" . }}
+
+      {{ partial "sidebar" . }}
+    </div>
+
+    <div class="col-12 col-md-9">
+
+      {{ if eq .IsHome false }}
+        {{ partial "parts/breadcrumbs" . }}
+      {{ end }}
+
       {{ block "main" . }}
       {{ end }}
-    </div>
-    <div class="col-12 col-md-4 mb-5">
-      {{ partial "sidebar" . }}
     </div>
   </div>
 </div>

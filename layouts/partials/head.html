@@ -40,11 +40,13 @@
     <meta property="og:description" content="{{ .Site.Params.Description }}" />
     <meta property="fb:app_id" content="{{ .Site.Params.fbAppId }}" />
 
+    <!-- referrer -->
+    <meta name="referrer" content="no-referrer">
+
     <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.Params.ImageFavicon }}">
     <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
 
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/styles.css">
-    <script src="{{ .Site.BaseURL }}javascripts/scripts.min.js"></script>
 
   </head>
   <body>

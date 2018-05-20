@@ -39,3 +39,18 @@ category = "categories"
   }
 }
 ```
+
+
+# webpack4
+
+watch:
+
+```
+$ npm run watch
+```
+
+build:
+
+```
+$ npm run build
+```
