@@ -47,7 +47,7 @@ category = "categories"
 watch:
 
 ```
-$ npm run watch
+$ npm run dev
 ```
 
 build:
