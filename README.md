@@ -3,6 +3,7 @@
 インストール:
 
 ```
+$ hugo new site xxx && cd xxx
 $ git submodule add git@github.com:is8r/hugo-bootstrap.git themes/hugo-bootstrap
 ```
 
@@ -35,7 +36,7 @@ category = "categories"
 {
   "scripts": {
     "hugo": "open http://localhost:1313/ && hugo server -D --watch",
-    "dev": "cd ./themes/hugo-bootstrap && npm install && gulp"
+    "dev": "cd ./themes/hugo-bootstrap && npm install && npm run dev"
   }
 }
 ```

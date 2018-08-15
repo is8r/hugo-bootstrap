@@ -15,9 +15,9 @@
   },
   "homepage": "",
   "devDependencies": {
-    "autoprefixer": "^8.2.0",
+    "autoprefixer": "^9.1.1",
     "bootstrap": "^4.0.0",
-    "css-loader": "^0.28.7",
+    "css-loader": "^1.0.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "font-awesome": "^4.7.0",
     "html-loader": "^0.5.5",
@@ -25,13 +25,13 @@
     "jquery": "^3.3.1",
     "node-sass": "^4.7.2",
     "popper.js": "^1.14.3",
-    "postcss-loader": "^2.0.10",
+    "postcss-loader": "^3.0.0",
     "sass-loader": "^7.0.1",
-    "spuit": "0.0.11",
-    "style-loader": "^0.21.0",
+    "spuit": "0.0.12",
+    "style-loader": "^0.22.1",
     "uglifyjs-webpack-plugin": "^1.2.4",
     "webpack": "^4.4.1",
-    "webpack-cli": "^2.0.13",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.1",
     "webpack-manifest-plugin": "^2.0.0-rc.2"
   },
@@ -40,6 +40,7 @@
     "build": "webpack --mode production --progress --config webpack/webpack.config.js"
   },
   "dependencies": {
-    "lunr": "^2.2.0"
+    "lunr": "^2.2.0",
+    "npm-check-updates": "^2.14.2"
   }
 }
