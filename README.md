@@ -41,6 +41,15 @@ category = "categories"
 }
 ```
 
+サイト内検索 `HugoSearch.js` を使用するには `.json` ファイルが必要なので、json書き出し用に `/content/search.adoc` として下記の内容が記載されたファイルを追加する必要があります:
+
+```
+---
+date: "2018-01-01"
+type: "json"
+url: "search.json"
+---
+```
 
 # webpack4
 
