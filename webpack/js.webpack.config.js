@@ -14,8 +14,8 @@ module.exports = {
     filename: 'javascripts/[name].js',
     path: __dirname + '/' + dist
   },
-  plugins: [
-    new UglifyJsPlugin()
-  ],
+  // plugins: [
+  //   new UglifyJsPlugin()
+  // ],
   cache: true
 };

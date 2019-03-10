@@ -6,7 +6,7 @@ $(function() {
 */
 
 import $ from 'jquery'
-import lunr from 'lunr';
+import lunr from 'lunr'
 
 export default class HugoSearch {
   constructor() {
