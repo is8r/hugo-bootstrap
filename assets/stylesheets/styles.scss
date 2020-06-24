@@ -1,7 +1,4 @@
-$fa-font-path: '/fonts';
-@import '~font-awesome/scss/font-awesome';
 @import "~bootstrap/scss/bootstrap";
-
 @import "~spuit/spuit";
 
 @import 'styles/config/variables';
@@ -14,8 +11,9 @@ $fa-font-path: '/fonts';
 
 html {
   font-size: 100%;
+  
   @include breakpoint-down(md) {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 

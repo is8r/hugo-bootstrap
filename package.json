@@ -15,32 +15,36 @@
   },
   "homepage": "",
   "devDependencies": {
-    "autoprefixer": "^9.1.1",
-    "bootstrap": ">=4.3.1",
-    "css-loader": "^2.1.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "font-awesome": "^4.7.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "jquery": "^3.5.0",
-    "node-sass": "^4.7.2",
-    "popper.js": "^1.14.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "autoprefixer": "^9.8.4",
+    "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.0",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "jquery": "^3.5.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "popper.js": "^1.16.1",
     "postcss-loader": "^3.0.0",
-    "sass-loader": "^7.0.1",
-    "spuit": "0.0.13",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.2",
-    "webpack": "^4.4.1",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": ">=3.1.11",
-    "webpack-manifest-plugin": "^2.0.0-rc.2"
-  },
-  "scripts": {
-    "dev": "webpack --watch --mode production",
-    "build": "webpack --mode production"
+    "sass-loader": "^8.0.2",
+    "spuit": "0.2.2",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-nano": "^1.0.0"
   },
   "dependencies": {
-    "lunr": "^2.2.0",
-    "npm-check-updates": "^3.0.3"
+    "lunr": "^2.3.8",
+    "npm-check-updates": "^7.0.1"
+  },
+  "scripts": {
+    "server": "webpack-dev-server --config ./webpack/develop.config.js --open",
+    "dev": "webpack --config ./webpack/develop.config.js",
+    "build": "webpack --config ./webpack/production.config.js"
   }
 }
