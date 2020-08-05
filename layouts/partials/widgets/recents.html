@@ -2,12 +2,12 @@
 <div class="widget">
   <h5>Recents</h5>
   <ul>
-    {{ range first 5 (where .Site.Pages "Section" "posts") }}
-      {{ if not (eq .URL "/posts/") }}
-        <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-        </li>
-      {{ end }}
+    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    {{ if not (eq .URL "/posts/") }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
     {{ end }}
   </ul>
 </div>

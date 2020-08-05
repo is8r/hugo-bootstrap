@@ -1,20 +1,16 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~spuit/spuit";
 
-@import 'styles/config/variables';
-@import 'styles/config/mixins';
+@import "styles/config/variables";
+@import "styles/config/mixins";
 
-@import 'styles/components/card';
-@import 'styles/components/syntax';
+@import "styles/components/card";
+@import "styles/components/syntax";
 
 // basic styles
 
 html {
   font-size: 100%;
-  
-  @include breakpoint-down(md) {
-    font-size: 90%;
-  }
 }
 
 body {
@@ -28,7 +24,7 @@ body {
     max-width: 700px;
 
     .modal-content {
-      border-radius: 0 0 .3rem .3rem;
+      border-radius: 0 0 0.3rem 0.3rem;
     }
   }
 
@@ -45,6 +41,7 @@ body {
       display: none;
     }
   }
+  
   #search-results {
     h5 {
       @include font(1.4rem, 2.4rem);
@@ -57,8 +54,9 @@ body {
         }
       }
     }
+    
     p {
-      @include font(.75rem);
+      @include font(0.75rem);
       color: $color-gray;
       white-space: nowrap;
       overflow: hidden;
@@ -87,7 +85,8 @@ body {
   &__item {
     padding-bottom: 20px;
 
-    h1, h1 a {
+    h1,
+    h1 a {
       @include font(1.4rem, 2.4rem);
     }
     a {
@@ -96,7 +95,7 @@ body {
     h1 {
       a {
         text-decoration: none;
-        padding-bottom: .3rem;
+        padding-bottom: 0.3rem;
 
         &:hover {
           text-decoration: none;
@@ -111,7 +110,8 @@ body {
 }
 
 .entry {
-  h1, h1 a {
+  h1,
+  h1 a {
     @include font(1.8rem, 2.8rem);
   }
 
@@ -119,11 +119,14 @@ body {
     color: $color-blue;
   }
 
-  p, a {
-    @include font(.9125rem, 2rem);
+  p,
+  a {
+    @include font(0.9125rem, 2rem);
   }
 
   &__content {
+    @include word-break;
+
     img {
       max-width: 100%;
     }
@@ -131,12 +134,12 @@ body {
 }
 
 .info {
-  @include font(.75rem, 1);
+  @include font(0.75rem, 1);
   color: $color-gray;
   padding-bottom: 10px;
 
   a {
-    @include font(.75rem, 1);
+    @include font(0.75rem, 1);
   }
 }
 
@@ -145,7 +148,7 @@ body {
     margin: 10px 0 20px;
 
     p {
-      @include font(.75rem);
+      @include font(0.75rem);
       margin-bottom: 5px;
     }
   }
@@ -157,7 +160,7 @@ body {
       display: inline-block;
       a {
         display: inline-block;
-        font-size: .6125rem !important;
+        font-size: 0.75rem !important;
         color: $color-black !important;
         background: #f2f2f2;
         border-radius: 30px;
@@ -178,25 +181,27 @@ body {
   padding-bottom: 40px;
 
   h5 {
-    @include font(.6125rem, 1);
-    color: #ddd;
-    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: $color-gray;
+    padding-bottom: 1rem;
   }
+
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+
     li {
-      @include font(.6125rem, 1);
+      font-size: 0.75rem;
       color: $color-gray;
-      padding-bottom: 10px;
+      padding-bottom: 1rem;
+      
       a {
-        @include font(.875rem, 1.6rem);
+        @include font(0.875rem, 1.6rem);
         color: $color-black;
 
         &:hover {
           color: $color-blue;
-
         }
       }
     }
@@ -211,7 +216,7 @@ body {
     padding: 0;
     li {
       display: inline-block;
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
       a {
         @include font(1rem, 1);
         color: $color-blue;
@@ -228,12 +233,12 @@ body {
     padding: 0;
     list-style: none;
     li {
-      @include font(.75rem);
+      @include font(0.75rem);
       display: inline-block;
       color: $color-gray;
 
       &:before {
-        content: '>';
+        content: ">";
       }
 
       &:first-child {
@@ -283,43 +288,14 @@ body {
   }
 }
 
-.previews {
-  $c: #f8f8f8;
-  margin: 2rem 0;
-
-  h5 {
-    @include font(.6125rem, 1);
-    color: #ddd;
-    text-transform: uppercase;
-  }
-
-  ul {
-    display: flex;
-    padding: 40px;
-    border-radius: 10px;
-    background: $c;
-    list-style: none;
-    @include breakpoint-down(md) {
-      padding: 20px;
-      justify-content: center;
-    }
-    li {
-      margin: 40px;
-      max-height: 600px;
-      overflow: hidden;
-      @include wordwrap-fadeout(60px, 0, $c);
-      @include breakpoint-down(md) {
-        margin: 20px;
-      }
-    }
-  }
+.emojify {
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+  font-size: 2rem;
+  vertical-align: middle;
 }
-
-.highlight {
-  padding-bottom: 20px;
-
-  > pre {
-    padding: 15px;
-    border-radius: 3px;
+@media screen and (max-width: 650px) {
+  .nowrap {
+    display: block;
+    margin: 25px 0;
   }
 }

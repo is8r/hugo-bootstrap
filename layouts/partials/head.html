@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="ja">
-  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    {{ if eq .IsHome false }}
-    <title>{{ .Title }} | {{ .Site.Title }}</title>
-    {{ else }}
-    <title>{{ .Site.Title }}</title>
-    {{ end }}
-    <meta name="description" content="{{ .Site.Params.Description }}" />
-    <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 
-    {{ if eq .IsHome false }}
-    <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
-    {{ else }}
-    <meta property="og:title" content="{{ .Site.Title }}" />
-    {{ end }}
+  {{ if .Site.Params.GoogleAnalyticsId }}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    {{ if eq .IsHome false }}
-    <meta property="og:type" content="article" />
-    {{ else }}
-    <meta property="og:type" content="website" />
-    {{ end }}
-    <meta property="og:url" content="{{ .Permalink }}" />
+    gtag('config', '{{ .Site.Params.GoogleAnalyticsId }}');
+  </script>
+  {{ end }}
 
-    {{ if ne .Params.ogp nil }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Params.ogp }}" />
-    {{ else }}
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ImageOgp }}" />
-    {{ end }}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    {{ if .RSSLink }}
-      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-      <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-    {{ end }}
+  {{ if eq .IsHome false }}
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
+  <meta name="description" content="{{ substr (.Summary | plainify) 0 80 }}..." />
+  {{ else }}
+  <title>{{ .Site.Title }}</title>
+  <meta name="description" content="{{ .Site.Params.Description }}" />
+  {{ end }}
+  <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
+  <link rel="canonical" href="{{ .Permalink }}" />
 
-    <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta property="og:description" content="{{ .Site.Params.Description }}" />
-    <meta property="fb:app_id" content="{{ .Site.Params.fbAppId }}" />
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
+  {{ end }}
 
-    <!-- referrer -->
-    <meta name="referrer" content="no-referrer">
+  <!-- OGP -->
+  {{ if eq .IsHome false }}
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta property="og:description" content="{{ .Site.Params.Description }}" />
+  <meta property="og:type" content="article" />
+  {{ else }}
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  <meta property="og:description" content="{{ substr (.Summary | plainify) 0 100 }}" />
+  <meta property="og:type" content="website" />
+  {{ end }}
+  {{ if ne .Params.Eyecatch nil }}
+  <meta property="og:image" content="{{ .Permalink }}{{ .Params.Eyecatch }}" />
+  {{ else }}
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ImageOgp }}" />
+  {{ end }}
+  <meta property="og:site_name" content="{{ .Site.Title }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  {{ if .Site.Params.fbAppId }}
+  <meta property="fb:app_id" content="{{ .Site.Params.fbAppId }}" />
+  {{ end }}
 
-    <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.Params.ImageFavicon }}">
-    <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
+  <!-- Twitter Card -->
+  {{ if eq .IsHome false }}
+  <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ substr (.Summary | plainify) 0 100 }}">
+  {{ else }}
+  <meta name="twitter:title" content="{{ .Site.Title }}">
+  <meta name="twitter:description" content="{{ .Site.Params.Description }}">
+  {{ end }}
+  {{ if ne .Params.Eyecatch nil }}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="{{ .Permalink }}{{ .Params.Eyecatch }}">
+  {{ else }}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.ImageOgp }}">
+  {{ end }}
+  <meta name="twitter:creator" content="{{ .Site.Params.TwitterId }}">
 
-    <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css">
+  {{ if .Site.Params.ImageFavicon }}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ .Site.Params.ImageFavicon }}">
+  {{ end }}
 
-  </head>
-  <body>
+  {{ if .Site.Params.ImageAppleTouchIcon }}
+  <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
+  {{ end }}
+
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css">
+
+</head>
+
+<body>

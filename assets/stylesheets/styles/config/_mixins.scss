@@ -5,13 +5,6 @@
   line-height: $line-height;
 }
 
-@mixin font-serif($size: 1rem, $line-height: normal, $weight: 400) {
-  font-family: $font-yumin;
-  font-size: $size;
-  font-weight: $weight;
-  line-height: $line-height;
-}
-
 @mixin button {
   @include font;
   @include button-normal(10px 10px, $color-blue, #fff, 5px);
@@ -25,56 +18,4 @@
 @mixin table {
   @include font(1rem);
   @include table-normal;
-}
-
-@at-root {
-  // animation: anim-wave 1.0s linear infinite
-  @keyframes anim-wave {
-    0% {
-      background-position: 0 0;
-    }
-    100% {
-      background-position: -1440px 0;
-    }
-  }
-}
-
-@at-root {
-  @each $bp in map-keys($grid-breakpoints) {
-    .hidden-#{$bp}-up {
-      @include breakpoint-up($bp) {
-        display: none !important;
-      }
-    }
-    .hidden-#{$bp}-down {
-      @include breakpoint-down($bp) {
-        display: none !important;
-      }
-    }
-  }
-}
-
-@mixin wordwrap-fadeout($h: 40px, $p: 10px, $c: #fff) {
-  position: relative;
-  overflow: hidden;
-  @if ($p > 1) {
-    &::before {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: $p;
-      background: $c;
-    }
-  }
-  &::after {
-    background-image: linear-gradient(to top, rgba($c,1), rgba($c,0));
-    content: '';
-    position: absolute;
-    bottom: $p;
-    left: 0;
-    width: 100%;
-    height: $h;
-  }
 }

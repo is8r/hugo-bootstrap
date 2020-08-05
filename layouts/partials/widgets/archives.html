@@ -1,0 +1,10 @@
+{{ if not (eq (len .Site.Pages) 0) }}
+<div class="widget">
+  <h5>Archives</h5>
+  <ul>
+    {{ range $items := .Site.Taxonomies.archives.Alphabetical.Reverse }}
+    <li><a href="{{ $.Site.BaseURL }}archives/{{ .Name | urlize | lower }}">{{ .Name }}</a> <span>({{ .Count }})</span></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}
