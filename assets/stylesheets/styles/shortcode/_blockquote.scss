@@ -1,0 +1,20 @@
+.blockquote {
+  color: $color-gray;
+  margin: 1rem 0;
+
+  p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-style: italic;
+  }
+
+  footer {
+    font-size: 0.75rem;
+    line-height: 1.8;
+
+    a {
+      font-size: 0.75rem;
+      line-height: 1.8;
+    }
+  }
+}

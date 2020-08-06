@@ -2,9 +2,9 @@
 
 <div class="entry {{ .Params.class }}">
   <h1>{{ .Title }}</h1>
-  {{/* partial "parts/info" . */}}
+  {{ partial "parts/info" . }}
 
-  <div class="entry__content">
+  <div class="body">
     {{ .Content }}
   </div>
 

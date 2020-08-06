@@ -1,28 +1,20 @@
 {{/*
 
-{{< card-amazon id="xxx" title="xxx" src="/images/xxx.png" >}}
+{{< card href="xxx" src="/images/xxx.png" >}}
 
 */}}
-<section class="card is-amazon">
-  {{ $id := (.Get "id") }}
-  {{ $title := (.Get "title") }}
+<section class="card">
+  {{ $href := (.Get "href") }}
   {{ $src := (.Get "src") }}
-  {{ $name := (.Get "name") }}
-  <h5>Amazon</h5>
-  <a href="https://www.amazon.co.jp/o/ASIN/{{ $id }}" target="_blank" class="card__link">
+  {{ $title := (.Get "title") }}
+  {{ $description := (.Get "description") }}
+  <a href="{{ $href }}" target="_blank">
     <span class="card__img">
       <img src="{{ $src }}" alt="" />
     </span>
     <span class="card__info">
-      <span class="card__title">
-        {{ $title }}
-        {{ if ne $name nil }}
-          / {{ $name }}
-        {{ end }}
-      </span>
-      <span class="card__url">
-        https://www.amazon.co.jp/o/ASIN/{{ $id }}
-      </span>
+      <p>{{ $title }}</p>
+      <p></p><small>{{ $description }}</small></p>
     </span>
   </a>
 </section>

@@ -1,0 +1,46 @@
+.search-modal {
+  .modal-dialog {
+    margin-top: -1px;
+    max-width: 700px;
+
+    .modal-content {
+      border-radius: 0 0 0.3rem 0.3rem;
+    }
+  }
+
+  input {
+    @include input;
+    margin: 0;
+  }
+  ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    &:empty {
+      display: none;
+    }
+  }
+  
+  #search-results {
+    h5 {
+      @include font(1.4rem, 2.4rem);
+      a {
+        color: $color-blue;
+
+        &:hover {
+          text-decoration: none;
+          border-bottom: 1px solid $color-blue;
+        }
+      }
+    }
+    
+    p {
+      @include font(0.75rem);
+      color: $color-gray;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+}

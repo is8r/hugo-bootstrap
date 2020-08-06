@@ -1,0 +1,57 @@
+.card {
+  $b: &;
+  border: 0;
+  margin: 0;
+  padding: 0;
+
+  > a {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid #eee;
+    text-decoration: none;
+    padding: 1rem;
+    position: relative;
+    color: $color-gray !important;
+    border-radius: 0.2rem;
+    
+    &:hover {
+      color: $color-blue !important;
+      border-color: $color-blue;
+    }
+  }
+
+  &__img {
+    display: block;
+    flex: 1 0 150px;
+    max-width: 150px;
+    height: auto;
+    
+    img {
+      width: 100%;
+    }
+
+    @include breakpoint-down(md) {
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__info {
+    padding: 0 0 0 1rem;
+
+    @include breakpoint-down(md) {
+      width: 100%;
+    }
+
+    p {
+      margin: 0;
+
+      + p {
+        margin-top: 0.2rem;
+      }
+    }
+  }
+}

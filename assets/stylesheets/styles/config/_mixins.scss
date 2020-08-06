@@ -1,13 +1,13 @@
-@mixin font($size: 1rem, $line-height: normal, $weight: 400) {
+@mixin font($size: null, $line-height: null, $weight: null) {
   font-family: $font-yu;
   font-size: $size;
-  font-weight: $weight;
   line-height: $line-height;
+  font-weight: $weight;
 }
 
 @mixin button {
   @include font;
-  @include button-normal(10px 10px, $color-blue, #fff, 5px);
+  @include button-normal(1rem, $color-blue, #fff, 5px);
 }
 
 @mixin input {
