@@ -1,9 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~spuit/spuit";
 
+@import "styles/imports/syntax";
+
 @import "styles/config/variables";
 @import "styles/config/mixins";
-@import "styles/imports/syntax";
 
 @import "styles/shortcode/card";
 @import "styles/shortcode/blockquote";
@@ -117,7 +118,12 @@ mark {
   a {
     @include font(0.9125rem, 1.8);
   }
-
+  
+  hr {
+    margin-top: $margin-block + 1rem;
+    margin-bottom: $margin-block + 1rem;
+  }
+  
   .highlight + h1,
   .highlight + h2,
   .highlight + h3,
@@ -181,8 +187,7 @@ mark {
     margin-bottom: $margin-block;
 
     hr {
-      margin-top: 0;
-      padding-top: 0;
+      margin-bottom: 1rem;
       border: 0;
       border-top: 1px solid #eee;
     }
@@ -202,7 +207,7 @@ mark {
 .sidebar {
   position: sticky;
   top: 1rem;
-  
+
   .widget {
     + .widget {
       margin-top: 2rem;
@@ -333,7 +338,8 @@ mark {
 }
 
 .emojify {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji,
+    Segoe UI Symbol, Android Emoji, EmojiSymbols;
   font-size: 2rem;
   vertical-align: middle;
 }

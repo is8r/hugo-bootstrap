@@ -7536,8 +7536,8 @@ necessary:
     color: #767676 !important;
     border-radius: 0.2rem; }
     .card > a:hover {
-      color: #3CA3BD !important;
-      border-color: #3CA3BD; }
+      color: #3ca3bd !important;
+      border-color: #3ca3bd; }
   .card__img {
     display: block;
     flex: 1 0 150px;
@@ -7639,10 +7639,10 @@ necessary:
   font-size: 1.4rem;
   line-height: 2.4rem; }
   .search-modal #search-results h5 a {
-    color: #3CA3BD; }
+    color: #3ca3bd; }
     .search-modal #search-results h5 a:hover {
       text-decoration: none;
-      border-bottom: 1px solid #3CA3BD; }
+      border-bottom: 1px solid #3ca3bd; }
 
 .search-modal #search-results p {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
@@ -7676,7 +7676,7 @@ legend {
   margin: 0; }
 
 a {
-  color: #3CA3BD;
+  color: #3ca3bd;
   text-decoration: underline;
   margin: 0 -0.2rem;
   padding: 0.5rem 0.2rem; }
@@ -7707,8 +7707,8 @@ mark {
   color: initial;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid #3CA3BD;
-  background-color: #3CA3BD;
+  border: 1px solid #3ca3bd;
+  background-color: #3ca3bd;
   color: #fff;
   padding: 1rem;
   line-height: 1; }
@@ -7721,7 +7721,7 @@ mark {
     pointer-events: none;
     opacity: 0.2; }
   .btn:focus {
-    background-color: #3CA3BD; }
+    background-color: #3ca3bd; }
   .btn:hover, .btn:active, .btn.is-current {
     color: #fff;
     background-color: #308296;
@@ -7732,7 +7732,7 @@ mark {
   font-size: 1rem;
   color: #444; }
   .header a:hover {
-    color: #3CA3BD;
+    color: #3ca3bd;
     text-decoration: none; }
 
 .entries article {
@@ -7743,7 +7743,7 @@ mark {
     font-size: 2rem;
     line-height: 1.8; }
   .entries article a {
-    color: #3CA3BD; }
+    color: #3ca3bd; }
 
 .entry h1,
 .entry h1 a {
@@ -7752,7 +7752,7 @@ mark {
   line-height: 1.8; }
 
 .entry a {
-  color: #3CA3BD; }
+  color: #3ca3bd; }
 
 .body {
   white-space: normal;
@@ -7771,6 +7771,9 @@ mark {
     font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
     font-size: 0.9125rem;
     line-height: 1.8; }
+  .body hr {
+    margin-top: 3rem;
+    margin-bottom: 3rem; }
   .body .highlight + h1,
   .body .highlight + h2,
   .body .highlight + h3,
@@ -7825,8 +7828,7 @@ mark {
     margin-top: 2rem;
     margin-bottom: 2rem; }
     .body .footnotes hr {
-      margin-top: 0;
-      padding-top: 0;
+      margin-bottom: 1rem;
       border: 0;
       border-top: 1px solid #eee; }
 
@@ -7867,7 +7869,7 @@ mark {
       line-height: 1.8;
       color: #444; }
       .widget ul li a:hover {
-        color: #3CA3BD; }
+        color: #3ca3bd; }
 
 .pagenator {
   text-align: center; }
@@ -7882,7 +7884,7 @@ mark {
         font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
         font-size: 1rem;
         line-height: 1;
-        color: #3CA3BD; }
+        color: #3ca3bd; }
 
 .breadcrumbs {
   margin-bottom: 1rem; }
@@ -7903,7 +7905,7 @@ mark {
       .breadcrumbs ol li a {
         font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
         font-size: 0.75rem;
-        color: #3CA3BD; }
+        color: #3ca3bd; }
 
 .related {
   padding: 1rem 0; }
@@ -7920,7 +7922,7 @@ mark {
         padding: 1rem; }
         .related ul li a:hover {
           text-decoration: none;
-          border-color: #3CA3BD; }
+          border-color: #3ca3bd; }
 
 .nextback > a {
   display: block;
@@ -7929,7 +7931,7 @@ mark {
   margin-bottom: 1rem; }
   .nextback > a:hover {
     text-decoration: none;
-    border-color: #3CA3BD; }
+    border-color: #3ca3bd; }
 
 .footer {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;

@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ if eq .IsHome true }}
+<h5>Recents</h5>{{ end }}
 
 <section class="entries">
   {{ range sort .Paginator.Pages }}

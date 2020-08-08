@@ -1,5 +1,4 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
@@ -10,10 +9,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../static')
   },
-  // devServer: {
-  //   contentBase: path.join(__dirname, '../static'),
-  //   watchContentBase: true
-  // },
   module: {
     rules: [
       {
@@ -38,13 +33,5 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin()
-    // new HtmlWebpackPlugin({
-    //   template: './html/index.ejs',
-    //   minify: {
-    //     removeComments: true,
-    //     collapseWhitespace: true,
-    //     removeAttributeQuotes: true
-    //   }
-    // })
   ]
 }
