@@ -29,8 +29,9 @@
   <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{ with .OutputFormats.Get "RSS" }}
-  <link href={{ .RelPermalink }} rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  {{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
   {{ end }}
 
   <!-- OGP -->
@@ -79,12 +80,7 @@
   <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
   {{ end }}
 
-  {{ if or .Params.math .Site.Params.math }}
-  {{ partial "imports/math" . }}
-  {{ end }}
-
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css">
-  
+  <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css" />
 </head>
 
 <body>
