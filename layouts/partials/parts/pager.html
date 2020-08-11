@@ -1,7 +1,7 @@
 {{ if gt .Paginator.TotalPages 1 }}
 <section class="pager">
   {{ if .Paginator.HasPrev }}
-  <a href="{{ .Paginator.Prev.URL }}">
+  <a href="{{ .Paginator.Prev.Permalink }}">
     Newer
   </a>
   {{ else }}
@@ -11,7 +11,7 @@
   {{ end }}
 
   {{ if .Paginator.HasNext }}
-  <a href="{{ .Paginator.Next.URL }}">
+  <a href="{{ .Paginator.Next.Permalink }}">
     Older
   </a>
   {{ else }}

@@ -12,19 +12,19 @@ form: https://tmnm.tech/2017/01/15/hugo-breadcrumbs/
       <span itemprop="name">home</span></a>
     <meta itemprop="position" content="{{$i}}" />
     </li>
-    {{range sort .Site.AllPages "URL"}}
-    {{ if ne .URL "/" }}
-    {{ if eq $this.URL .URL }}
+    {{range sort .Site.AllPages "Permalink"}}
+    {{ if ne .Params.url "/" }}
+    {{ if eq $this.Permalink .Permalink }}
     <li itemprop="itemListElement" itemscope
         itemtype="https://schema.org/ListItem">
         <span itemprop="name">{{.Title}}</span>
       <meta itemprop="position" content="{{$i}}" />
     </li>
-    {{ else if hasPrefix $this.URL (printf "%s/" .URL) }}
+    {{ else if hasPrefix $this.Permalink (printf "%s/" .Params.url) }}
     {{ $i := add $i 1 }}
     <li itemprop="itemListElement" itemscope
         itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{.URL}}">
+        <a itemprop="item" href="{{ .Params.url }}">
         <span itemprop="name">{{.Title}}</span></a>
       <meta itemprop="position" content="{{$i}}" />
     </li>

@@ -7871,20 +7871,20 @@ mark {
       .widget ul li a:hover {
         color: #3ca3bd; }
 
-.pagenator {
-  text-align: center; }
-  .pagenator ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    .pagenator ul li {
-      display: inline-block;
-      padding: 0 0.5rem; }
-      .pagenator ul li a {
-        font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-        font-size: 1rem;
-        line-height: 1;
-        color: #3ca3bd; }
+.pagination {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center; }
+  .pagination .page-item {
+    display: inline-block; }
+    .pagination .page-item .page-link {
+      font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+      font-size: 1rem;
+      line-height: 1;
+      color: #3ca3bd;
+      border: 0;
+      background-color: transparent; }
 
 .breadcrumbs {
   margin-bottom: 1rem; }
