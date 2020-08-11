@@ -3,7 +3,7 @@
   <h5>Recents</h5>
   <ul>
     {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
-    {{ if not (eq .URL "/posts/") }}
+    {{ if not (eq .Permalink "/posts/") }}
     <li>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>

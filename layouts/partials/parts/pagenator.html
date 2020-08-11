@@ -12,7 +12,7 @@
 
     {{ range $pag.Pagers }}
     <li {{ if eq . $pag }} class="active" {{ end }}>
-      <a href="{{ .URL }}">
+      <a href="{{ .Permalink }}">
         {{ .PageNumber }}
       </a>
     </li>
