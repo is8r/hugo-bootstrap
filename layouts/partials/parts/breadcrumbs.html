@@ -1,36 +1,22 @@
-{{/*
-form: https://tmnm.tech/2017/01/15/hugo-breadcrumbs/
-*/}}
-
-{{ $this := . }}
-{{ $i := 1 }}
 <div class="breadcrumbs">
-  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-    <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="/">
-      <span itemprop="name">home</span></a>
-    <meta itemprop="position" content="{{$i}}" />
+  <ol>
+    <li>
+      <a href="{{ .Site.BaseURL }}">Home</a>
     </li>
-    {{range sort .Site.AllPages "Permalink"}}
-    {{ if ne .Params.url "/" }}
-    {{ if eq $this.Permalink .Permalink }}
-    <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-        <span itemprop="name">{{.Title}}</span>
-      <meta itemprop="position" content="{{$i}}" />
-    </li>
-    {{ else if hasPrefix $this.Permalink (printf "%s/" .Params.url) }}
-    {{ $i := add $i 1 }}
-    <li itemprop="itemListElement" itemscope
-        itemtype="https://schema.org/ListItem">
-        <a itemprop="item" href="{{ .Params.url }}">
-        <span itemprop="name">{{.Title}}</span></a>
-      <meta itemprop="position" content="{{$i}}" />
-    </li>
-
-    {{ end }}
-    {{ end }}
-    {{ end }}
+    {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
   </ol>
 </div>
+
+{{ define "breadcrumbnav" }}
+  {{ if .p1.Parent }}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 )  }}
+  {{ else if not .p1.IsHome }}
+    {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 )  }}
+  {{ end }}
+  
+  {{ if ne .p1.Title "" }}
+  <li{{ if eq .p1 .p2 }} class="active" {{ end }}>
+    <a href="{{ .p1.Permalink }}">{{ .p1.Title }}</a>
+  </li>
+  {{ end }}
+{{ end }}
