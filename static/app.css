@@ -7727,7 +7727,8 @@ mark {
     background-color: #308296;
     border-color: #308296; }
 
-.btn-outline, .related ul li a, .nextback > a {
+.btn-outline, .related ul li a, .nextback .prev,
+.nextback .next {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
   font-size: 1rem;
   display: inline-block;
@@ -7735,7 +7736,8 @@ mark {
   padding: 1rem;
   color: #444;
   text-decoration: none; }
-  .btn-outline:hover, .related ul li a:hover, .nextback > a:hover {
+  .btn-outline:hover, .related ul li a:hover, .nextback .prev:hover,
+  .nextback .next:hover {
     text-decoration: none;
     color: #3ca3bd;
     border-color: #3ca3bd; }
@@ -7952,9 +7954,12 @@ mark {
   justify-content: space-between;
   align-items: stretch;
   margin: 0 -0.5rem 1rem; }
-  .nextback > a {
+  .nextback .prev,
+  .nextback .next {
     flex: 1 0 auto;
     margin: 0 0.5rem; }
+  .nextback .next {
+    text-align: right; }
 
 .footer {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;

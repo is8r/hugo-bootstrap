@@ -353,10 +353,15 @@ mark {
   align-items: stretch;
   margin: 0 -0.5rem 1rem;
 
-  > a {
+  .prev,
+  .next {
     @extend .btn-outline;
     flex: 1 0 auto;
     margin: 0 0.5rem;
+  }
+  
+  .next {
+    text-align: right;
   }
 }
 
