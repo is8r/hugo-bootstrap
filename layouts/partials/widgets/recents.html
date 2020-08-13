@@ -1,12 +1,16 @@
 {{ if not (eq (len .Site.Pages) 0) }}
 <div class="widget">
-  <h5>Recents</h5>
+  <h5>
+    <a href="/posts/">Recents</a>
+  </h5>
   <ul>
     {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
     {{ if not (eq .Permalink "/posts/") }}
+    {{ if not (eq (len .Title) 0) }}
     <li>
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     </li>
+    {{ end }}
     {{ end }}
     {{ end }}
   </ul>

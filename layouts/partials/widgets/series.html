@@ -1,6 +1,8 @@
 {{ if isset .Site.Taxonomies "series" }}
 <div class="widget">
-  <h5>Series</h5>
+  <h5>
+    <a href="/series">Series</a>
+  </h5>
   <ul>
     {{ range .Site.Taxonomies.series }}
     <li><a href="{{ .Page.Permalink }}">{{ .Page.LinkTitle }}</a> <span class="count">({{ .Count }})</span></li>

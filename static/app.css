@@ -7727,6 +7727,19 @@ mark {
     background-color: #308296;
     border-color: #308296; }
 
+.btn-outline, .related ul li a, .nextback > a {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #444;
+  text-decoration: none; }
+  .btn-outline:hover, .related ul li a:hover, .nextback > a:hover {
+    text-decoration: none;
+    color: #3ca3bd;
+    border-color: #3ca3bd; }
+
 .header a {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
   font-size: 1rem;
@@ -7745,14 +7758,14 @@ mark {
   .entries article a {
     color: #3ca3bd; }
 
-.entry h1,
-.entry h1 a {
+.entry > h1,
+.entry > h1 a {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
   font-size: 2rem;
   line-height: 1.8; }
 
-.entry a {
-  color: #3ca3bd; }
+.entry > hr {
+  margin: 3rem 0; }
 
 .body {
   white-space: normal;
@@ -7827,6 +7840,14 @@ mark {
   .body .footnotes {
     margin-top: 2rem;
     margin-bottom: 2rem; }
+    .body .footnotes p {
+      font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+      font-size: 0.75rem;
+      line-height: 1.8; }
+      .body .footnotes p a {
+        font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+        font-size: 0.75rem;
+        line-height: 1.8; }
     .body .footnotes hr {
       margin-bottom: 1rem;
       border: 0;
@@ -7853,6 +7874,15 @@ mark {
 .widget h5 {
   font-size: 0.75rem;
   color: #767676; }
+  .widget h5 a {
+    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.8;
+    color: #767676;
+    text-decoration: none; }
+    .widget h5 a:hover {
+      color: #3ca3bd;
+      text-decoration: underline; }
 
 .widget ul {
   list-style: none;
@@ -7916,22 +7946,15 @@ mark {
       display: inline-block;
       margin: 0.5rem;
       line-height: 1; }
-      .related ul li a {
-        display: inline-block;
-        border: 1px solid #eee;
-        padding: 1rem; }
-        .related ul li a:hover {
-          text-decoration: none;
-          border-color: #3ca3bd; }
 
-.nextback > a {
-  display: block;
-  border: 1px solid #eee;
-  padding: 1rem;
-  margin-bottom: 1rem; }
-  .nextback > a:hover {
-    text-decoration: none;
-    border-color: #3ca3bd; }
+.nextback {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 -0.5rem 1rem; }
+  .nextback > a {
+    flex: 1 0 auto;
+    margin: 0 0.5rem; }
 
 .footer {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
