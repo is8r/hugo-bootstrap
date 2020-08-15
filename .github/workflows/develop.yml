@@ -30,7 +30,7 @@ jobs:
     - name: Run Hugo
       run: |
         alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
-        hugo --minify --config ./assets/demo/config.toml --themesDir ../../ --contentDir exampleSite/content
+        hugo --minify --config ./assets/demo/config.toml --themesDir ../../ --contentDir exampleSite/content -baseURL https://hugo-bootstrap.12px.com/
         
     - name: Rsync Deployments
       id: deploy
