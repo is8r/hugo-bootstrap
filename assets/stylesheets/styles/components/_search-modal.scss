@@ -1,4 +1,6 @@
 .search-modal {
+  z-index: 1041;
+
   .modal-dialog {
     margin-top: -1px;
     max-width: 700px;
@@ -21,7 +23,7 @@
       display: none;
     }
   }
-  
+
   #search-results {
     h5 {
       @include font(1.4rem, 2.4rem);
@@ -34,7 +36,7 @@
         }
       }
     }
-    
+
     p {
       @include font(0.75rem);
       color: $color-gray;

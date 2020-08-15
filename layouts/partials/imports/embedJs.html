@@ -1,0 +1,5 @@
+{{ with resources.Get "dist/app.js" }}
+<script>
+  {{ .Content | safeJS }}
+</script>
+{{ end }}

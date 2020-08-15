@@ -1,9 +1,10 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~spuit/spuit";
 
+@import "styles/imports/syntax";
+
 @import "styles/config/variables";
 @import "styles/config/mixins";
-@import "styles/imports/syntax";
 
 @import "styles/shortcode/card";
 @import "styles/shortcode/blockquote";
@@ -36,6 +37,7 @@ legend {
   margin: 0;
 }
 
+// p {
 a {
   color: $color-blue;
   text-decoration: underline;
@@ -54,6 +56,7 @@ a {
     text-decoration: none;
   }
 }
+// }
 
 mark {
   background-color: #fcff41;
@@ -61,6 +64,21 @@ mark {
 
 .btn {
   @include button;
+}
+
+.btn-outline {
+  @include font(1rem);
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-blue;
+    border-color: $color-blue;
+  }
 }
 
 .header {
@@ -90,12 +108,13 @@ mark {
 }
 
 .entry {
-  h1,
-  h1 a {
+  > h1,
+  > h1 a {
     @include font(2rem, 1.8);
   }
-  a {
-    color: $color-blue;
+
+  > hr {
+    margin: 3rem 0;
   }
 }
 
@@ -116,6 +135,11 @@ mark {
   p,
   a {
     @include font(0.9125rem, 1.8);
+  }
+
+  hr {
+    margin-top: $margin-block + 1rem;
+    margin-bottom: $margin-block + 1rem;
   }
 
   .highlight + h1,
@@ -180,9 +204,15 @@ mark {
     margin-top: $margin-block;
     margin-bottom: $margin-block;
 
+    p {
+      @include font(0.75rem, 1.8);
+      a {
+        @include font(0.75rem, 1.8);
+      }
+    }
+
     hr {
-      margin-top: 0;
-      padding-top: 0;
+      margin-bottom: 1rem;
       border: 0;
       border-top: 1px solid #eee;
     }
@@ -202,7 +232,7 @@ mark {
 .sidebar {
   position: sticky;
   top: 1rem;
-  
+
   .widget {
     + .widget {
       margin-top: 2rem;
@@ -214,6 +244,17 @@ mark {
   h5 {
     font-size: 0.75rem;
     color: $color-gray;
+
+    a {
+      @include font(0.75rem, 1.8);
+      color: $color-gray;
+      text-decoration: none;
+
+      &:hover {
+        color: $color-blue;
+        text-decoration: underline;
+      }
+    }
   }
 
   ul {
@@ -237,19 +278,20 @@ mark {
   }
 }
 
-.pagenator {
-  text-align: center;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      display: inline-block;
-      padding: 0 0.5rem;
-      a {
-        @include font(1rem, 1);
-        color: $color-blue;
-      }
+.pagination {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+
+  .page-item {
+    display: inline-block;
+
+    .page-link {
+      @include font(1rem, 1);
+      color: $color-blue;
+      border: 0;
+      background-color: transparent;
     }
   }
 }
@@ -299,30 +341,27 @@ mark {
       line-height: 1;
 
       a {
-        display: inline-block;
-        border: 1px solid #eee;
-        padding: 1rem;
-
-        &:hover {
-          text-decoration: none;
-          border-color: $color-blue;
-        }
+        @extend .btn-outline;
       }
     }
   }
 }
 
 .nextback {
-  > a {
-    display: block;
-    border: 1px solid #eee;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 0 -0.5rem 1rem;
 
-    &:hover {
-      text-decoration: none;
-      border-color: $color-blue;
-    }
+  .prev,
+  .next {
+    @extend .btn-outline;
+    flex: 1 0 auto;
+    margin: 0 0.5rem;
+  }
+  
+  .next {
+    text-align: right;
   }
 }
 
@@ -333,7 +372,8 @@ mark {
 }
 
 .emojify {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji,
+    Segoe UI Symbol, Android Emoji, EmojiSymbols;
   font-size: 2rem;
   vertical-align: middle;
 }

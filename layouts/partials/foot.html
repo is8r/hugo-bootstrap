@@ -9,7 +9,8 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   {{ end }}
 
-  <script src="{{ .Site.BaseURL }}app.js"></script>
+  {{ partial "imports/embedJs" . }}
+  {{ partial "widgets/search-modal" . }}
 
   </body>
 </html>

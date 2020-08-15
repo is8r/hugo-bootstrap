@@ -8,7 +8,11 @@
     {{ .Content }}
   </div>
 
-  {{ partial "widgets/related" . }}
+  <div class="mt-5">
+    {{ partial "parts/nextback" . }}
+
+    {{ partial "parts/related" . }}
+  </div>
 </div>
 
 {{ end }}
