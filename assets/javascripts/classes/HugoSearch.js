@@ -1,10 +1,3 @@
-/*
-import HugoSearch from './classes/HugoSearch';
-$(function() {
-  var hugoSearch = new HugoSearch();
-});
-*/
-
 import $ from 'jquery'
 import lunr from 'lunr'
 
@@ -91,12 +84,12 @@ export default class HugoSearch {
 
   displayResults(results) {
     var searchResults = document.querySelector('#search-results');
-    var inputVal = document.querySelector('#search-input').value;
+    // var inputVal = document.querySelector('#search-input').value;
     if (results.length) {
       searchResults.innerHTML = '';
       results.forEach((result) => {
         var item = this.searchData[result.ref];
-        var section = item.section.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
+        // var section = item.section.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
         var appendString = '';
         appendString += '<li class=\"search-result\"><h5><a href=\"' + item.url + '\">' + item.title + '</a></h5><p>' + item.summary + '</p>';
         // appendString += '<div class=\"in-section\">In: ' + section + '</div><ul class=\"tags\">';

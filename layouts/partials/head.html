@@ -69,7 +69,7 @@
   <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
   {{ end }}
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css" />
+  {{ partial "imports/embedCss" . }}
 </head>
 
 <body>

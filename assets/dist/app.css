@@ -7574,83 +7574,81 @@ necessary:
       font-size: 0.75rem;
       line-height: 1.8; }
 
-.search-modal .modal-dialog {
-  margin-top: -1px;
-  max-width: 700px; }
-  .search-modal .modal-dialog .modal-content {
-    border-radius: 0 0 0.3rem 0.3rem; }
-
-.search-modal input {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  margin: 0;
-  padding: 0;
-  border-radius: 0;
-  background-image: none;
-  background: transparent;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  font-size: inherit;
-  display: inline-block;
-  width: 100%;
-  padding: 0.4rem 0.5rem;
-  box-sizing: border-box;
-  line-height: 1;
-  border-radius: 2px;
-  border: 1px solid #ddd;
-  margin: 0; }
-  .search-modal input:focus {
+.search-modal {
+  z-index: 1041; }
+  .search-modal .modal-dialog {
+    margin-top: -1px;
+    max-width: 700px; }
+    .search-modal .modal-dialog .modal-content {
+      border-radius: 0 0 0.3rem 0.3rem; }
+  .search-modal input {
+    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    background-image: none;
+    background: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+         appearance: none;
     border: none;
-    outline: none; }
-  .search-modal input::-moz-placeholder {
-    font-size: inherit; }
-  .search-modal input:-ms-input-placeholder {
-    font-size: inherit; }
-  .search-modal input::-ms-input-placeholder {
-    font-size: inherit; }
-  .search-modal input::placeholder {
-    font-size: inherit; }
-  .search-modal input::-moz-placeholder {
-    color: #ddd; }
-  .search-modal input:-ms-input-placeholder {
-    color: #ddd; }
-  .search-modal input::-ms-input-placeholder {
-    color: #ddd; }
-  .search-modal input::placeholder {
-    color: #ddd; }
-  .search-modal input:hover {
-    border-color: rgba(82, 158, 246, 0.5); }
-  .search-modal input:focus {
-    border: 1px solid rgba(82, 158, 246, 0.5);
-    outline: 5px solid rgba(82, 158, 246, 0.2); }
-
-.search-modal ul {
-  margin: 20px 0 0 0;
-  padding: 0;
-  list-style: none; }
-  .search-modal ul:empty {
-    display: none; }
-
-.search-modal #search-results h5 {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 1.4rem;
-  line-height: 2.4rem; }
-  .search-modal #search-results h5 a {
-    color: #3ca3bd; }
-    .search-modal #search-results h5 a:hover {
-      text-decoration: none;
-      border-bottom: 1px solid #3ca3bd; }
-
-.search-modal #search-results p {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 0.75rem;
-  color: #767676;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis; }
+    outline: none;
+    text-decoration: none;
+    font-size: inherit;
+    display: inline-block;
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    box-sizing: border-box;
+    line-height: 1;
+    border-radius: 2px;
+    border: 1px solid #ddd;
+    margin: 0; }
+    .search-modal input:focus {
+      border: none;
+      outline: none; }
+    .search-modal input::-moz-placeholder {
+      font-size: inherit; }
+    .search-modal input:-ms-input-placeholder {
+      font-size: inherit; }
+    .search-modal input::-ms-input-placeholder {
+      font-size: inherit; }
+    .search-modal input::placeholder {
+      font-size: inherit; }
+    .search-modal input::-moz-placeholder {
+      color: #ddd; }
+    .search-modal input:-ms-input-placeholder {
+      color: #ddd; }
+    .search-modal input::-ms-input-placeholder {
+      color: #ddd; }
+    .search-modal input::placeholder {
+      color: #ddd; }
+    .search-modal input:hover {
+      border-color: rgba(82, 158, 246, 0.5); }
+    .search-modal input:focus {
+      border: 1px solid rgba(82, 158, 246, 0.5);
+      outline: 5px solid rgba(82, 158, 246, 0.2); }
+  .search-modal ul {
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style: none; }
+    .search-modal ul:empty {
+      display: none; }
+  .search-modal #search-results h5 {
+    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem; }
+    .search-modal #search-results h5 a {
+      color: #3ca3bd; }
+      .search-modal #search-results h5 a:hover {
+        text-decoration: none;
+        border-bottom: 1px solid #3ca3bd; }
+  .search-modal #search-results p {
+    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+    font-size: 0.75rem;
+    color: #767676;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
 
 html {
   font-size: 100%;

@@ -1,0 +1,5 @@
+{{ with resources.Get "dist/app.css" }}
+<style>
+  {{ .Content | safeCSS }}
+</style>
+{{ end }}
