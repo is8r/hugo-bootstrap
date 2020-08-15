@@ -19,18 +19,18 @@ jobs:
       with:
         hugo-version: '0.74.2'
         extended: true
-        
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.7
 
-      - run: gem install asciidoctor
+    - name: Setup Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7
 
-      - name: Run Hugo
-        run: |
-          alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
-          hugo --minify --config ../assets/demo/config.toml
+    - run: gem install asciidoctor
+
+    - name: Run Hugo
+      run: |
+        alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
+        hugo --minify --config ../assets/demo/config.toml
         
     # - name: Rsync Deployments
     #   id: deploy
