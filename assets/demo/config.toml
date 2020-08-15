@@ -2,12 +2,12 @@ baseURL = "http://example.org/"
 languageCode = "ja"
 title = "Hugo Bootstrap"
 theme = "hugo-bootstrap"
-themesDir = "../../"
 copyright = "© Hugo Bootstrap"
 pygmentsUseClasses = true
 # disableKinds = ["page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
 enableEmoji = true
 googleAnalytics = ""
+publishDir = "../public"
 
 [params]
   description = "description"
