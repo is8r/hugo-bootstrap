@@ -7536,8 +7536,8 @@ necessary:
     color: #767676 !important;
     border-radius: 0.2rem; }
     .card > a:hover {
-      color: #008db1 !important;
-      border-color: #008db1; }
+      color: #006781 !important;
+      border-color: #006781; }
   .card__img {
     display: block;
     flex: 1 0 150px;
@@ -7638,10 +7638,10 @@ necessary:
     font-size: 1.4rem;
     line-height: 2.4rem; }
     .search-modal #search-results h5 a {
-      color: #008db1; }
+      color: #006781; }
       .search-modal #search-results h5 a:hover {
         text-decoration: none;
-        border-bottom: 1px solid #008db1; }
+        border-bottom: 1px solid #006781; }
   .search-modal #search-results p {
     font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
     font-size: 0.75rem;
@@ -7674,12 +7674,12 @@ legend {
   margin: 0; }
 
 a {
-  color: #008db1;
+  color: #006781;
   text-decoration: underline;
   margin: 0 -0.2rem;
   padding: 0.5rem 0.2rem; }
   a:hover {
-    color: #00cafe; }
+    color: #00a4ce; }
   a:active {
     outline: 3px solid rgba(82, 158, 246, 0.2); }
   a.no-underline {
@@ -7705,8 +7705,8 @@ mark {
   color: initial;
   text-align: center;
   border-radius: 5px;
-  border: 1px solid #008db1;
-  background-color: #008db1;
+  border: 1px solid #006781;
+  background-color: #006781;
   color: #fff;
   padding: 1rem;
   line-height: 1; }
@@ -7719,11 +7719,11 @@ mark {
     pointer-events: none;
     opacity: 0.2; }
   .btn:focus {
-    background-color: #008db1; }
+    background-color: #006781; }
   .btn:hover, .btn:active, .btn.is-current {
     color: #fff;
-    background-color: #00647e;
-    border-color: #00647e; }
+    background-color: #003e4e;
+    border-color: #003e4e; }
 
 .btn-outline, .related ul li a, .nextback .prev,
 .nextback .next {
@@ -7737,15 +7737,15 @@ mark {
   .btn-outline:hover, .related ul li a:hover, .nextback .prev:hover,
   .nextback .next:hover {
     text-decoration: none;
-    color: #008db1;
-    border-color: #008db1; }
+    color: #006781;
+    border-color: #006781; }
 
 .header a {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
   font-size: 1rem;
   color: #444; }
   .header a:hover {
-    color: #008db1;
+    color: #006781;
     text-decoration: none; }
 
 .entries article {
@@ -7756,7 +7756,7 @@ mark {
     font-size: 2rem;
     line-height: 1.8; }
   .entries article a {
-    color: #008db1; }
+    color: #006781; }
 
 .entry > h1,
 .entry > h1 a {
@@ -7881,7 +7881,7 @@ mark {
     color: #767676;
     text-decoration: none; }
     .widget h5 a:hover {
-      color: #008db1;
+      color: #006781;
       text-decoration: underline; }
 
 .widget ul {
@@ -7899,7 +7899,7 @@ mark {
       line-height: 1.8;
       color: #444; }
       .widget ul li a:hover {
-        color: #008db1; }
+        color: #006781; }
 
 .pagination {
   list-style: none;
@@ -7912,7 +7912,7 @@ mark {
       font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
       font-size: 1rem;
       line-height: 1;
-      color: #008db1;
+      color: #006781;
       border: 0;
       background-color: transparent; }
 
@@ -7935,7 +7935,7 @@ mark {
       .breadcrumbs ol li a {
         font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
         font-size: 0.75rem;
-        color: #008db1; }
+        color: #006781; }
 
 .related {
   padding: 1rem 0; }
