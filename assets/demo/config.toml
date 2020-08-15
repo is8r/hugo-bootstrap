@@ -7,7 +7,7 @@ pygmentsUseClasses = true
 # disableKinds = ["page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
 enableEmoji = true
 googleAnalytics = ""
-publishDir = "../public"
+publishDir = "public"
 
 [params]
   description = "description"
