@@ -32,21 +32,21 @@ jobs:
         alias asciidoctor="asciidoctor --attribute=experimental=true --attribute=icons=font"
         hugo --minify --config ./assets/demo/config.toml --themesDir ../../
         
-    # - name: Rsync Deployments
-    #   id: deploy
-    #   uses: Pendect/action-rsyncer@v1.1.0
-    #   env:
-    #     DEPLOY_KEY: ${{ secrets.heteml }}
-    #   with:
-    #     flags: '-avzr --delete'
-    #     options: ''
-    #     ssh_options: '-p 2222'
-    #     src: 'public/'
-    #     dest: 'nrm@ssh-nrm.heteml.net:web/12px.com/sample/staging/blog'
-    # - name: Slack Notification
-    #   uses: rtCamp/action-slack-notify@v2.0.0
-    #   env:
-    #     SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-    #     SLACK_COLOR: '#9CDAF0'
-    #     SLACK_TITLE: Staging URL
-    #     SLACK_MESSAGE: 'https://staging.12px.com/blog :globe_with_meridians:'
+    - name: Rsync Deployments
+      id: deploy
+      uses: Pendect/action-rsyncer@v1.1.0
+      env:
+        DEPLOY_KEY: ${{ secrets.heteml }}
+      with:
+        flags: '-avzr --delete'
+        options: ''
+        ssh_options: '-p 2222'
+        src: 'public/'
+        dest: 'nrm@ssh-nrm.heteml.net:web/hugo-bootstrap.12px.com'
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2.0.0
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        SLACK_COLOR: '#9CDAF0'
+        SLACK_TITLE: Staging URL
+        SLACK_MESSAGE: 'https://hugo-bootstrap.12px.com :globe_with_meridians:'
