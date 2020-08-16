@@ -64,3 +64,10 @@ build:
 ```
 $ npm run build
 ```
+
+
+シンタックスのカラーの変更:
+
+```
+$ hugo gen chromastyles --style=github > ./assets/stylesheets/styles/imports/syntax.css
+```
