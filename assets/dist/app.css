@@ -7734,6 +7734,9 @@ label,
 legend {
   margin: 0; }
 
+code {
+  color: #be3600; }
+
 a {
   color: #006781;
   text-decoration: underline;
