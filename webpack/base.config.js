@@ -1,6 +1,5 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   context: path.resolve(__dirname, "../assets"),
@@ -34,8 +33,5 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin(),
-    new UglifyJsPlugin({
-      uglifyOptions: { output: { comments: false } },
-    }),
   ],
 };
