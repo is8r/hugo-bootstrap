@@ -9,6 +9,9 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   {{ end }}
 
+  {{ if or .Params.math .Site.Params.math }}
+  {{ partial "imports/math.html" . }}
+  {{ end }}
   {{ partial "imports/embedJs" . }}
   {{ partial "widgets/search-modal" . }}
 
