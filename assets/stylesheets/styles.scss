@@ -37,6 +37,8 @@ legend {
   margin: 0;
 }
 
+li > code,
+td > code,
 p > code {
   color: #be3600;
   background-color: rgba(#be3600, 0.05);
