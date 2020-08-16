@@ -1,9 +1,13 @@
 <section class="nextback">
   {{ with .PrevInSection }}
+  {{ if ne .Title "" }}
     <a class="prev" href="{{.Permalink}}">&lt; {{.Title}}</a>
+  {{ end }}
   {{ end }}
 
   {{ with .NextInSection }}
+  {{ if ne .Title "" }}
     <a class="next" href="{{.Permalink}}">{{.Title}} &gt;</a>
+  {{ end }}
   {{ end }}
 </section>

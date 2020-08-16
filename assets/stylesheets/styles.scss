@@ -101,6 +101,10 @@ mark {
 }
 
 .entries {
+  &.is-home {
+    margin-top: -0.5rem;
+  }
+  
   article {
     padding-bottom: 2rem;
 
