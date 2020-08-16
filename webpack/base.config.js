@@ -1,13 +1,14 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, '../assets'),
+  context: path.resolve(__dirname, "../assets"),
   entry: {
-    app: ['./javascripts/index.js']
+    app: ["./javascripts/index.js"],
   },
   output: {
-    path: path.resolve(__dirname, '../assets/dist')
+    path: path.resolve(__dirname, "../assets/dist"),
   },
   module: {
     rules: [
@@ -15,23 +16,26 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          "css-loader",
           {
-            loader: 'postcss-loader'
+            loader: "postcss-loader",
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
-      }
-    ]
+        use: "babel-loader",
+      },
+    ],
   },
   plugins: [
-    new MiniCssExtractPlugin()
-  ]
-}
+    new MiniCssExtractPlugin(),
+    new UglifyJsPlugin({
+      uglifyOptions: { output: { comments: false } },
+    }),
+  ],
+};

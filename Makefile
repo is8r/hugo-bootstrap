@@ -13,6 +13,7 @@ dev:
 	yarn run dev
 
 build:
+	yarn run build; \
 	cd exampleSite; \
 	hugo \
 	--themesDir ../../ \
