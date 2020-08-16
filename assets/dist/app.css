@@ -7735,7 +7735,8 @@ legend {
   margin: 0; }
 
 code {
-  color: #be3600; }
+  color: #be3600;
+  background-color: rgba(190, 54, 0, 0.05); }
 
 a {
   color: #006781;
