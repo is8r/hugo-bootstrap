@@ -72,6 +72,5 @@ $ npm run build
 https://xyproto.github.io/splash/docs/longer/all.html で良さそうなのを探して以下を実行
 
 ```
-$ hugo gen chromastyles --style=rrt > ./assets/stylesheets/styles/imports/syntax.css
-$ hugo gen chromastyles --style=vs > ./assets/stylesheets/styles/imports/syntax.css
+$ hugo gen chromastyles --style=api > ./assets/stylesheets/styles/imports/syntax.css
 ```
