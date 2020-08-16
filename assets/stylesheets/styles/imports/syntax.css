@@ -16,7 +16,7 @@
 /* Name */ .chroma .n {  }
 /* NameAttribute */ .chroma .na { color: #008080 }
 /* NameBuiltin */ .chroma .nb { color: #0086b3 }
-/* NameBuiltinPseudo */ .chroma .bp { color: #999999 }
+/* NameBuiltinPseudo */ .chroma .bp { color: #767676 }
 /* NameClass */ .chroma .nc { color: #445588; font-weight: bold }
 /* NameConstant */ .chroma .no { color: #008080 }
 /* NameDecorator */ .chroma .nd { color: #3c5d5d; font-weight: bold }
@@ -60,18 +60,18 @@
 /* Operator */ .chroma .o { color: #000000; font-weight: bold }
 /* OperatorWord */ .chroma .ow { color: #000000; font-weight: bold }
 /* Punctuation */ .chroma .p {  }
-/* Comment */ .chroma .c { color: #999988; font-style: italic }
-/* CommentHashbang */ .chroma .ch { color: #999988; font-style: italic }
-/* CommentMultiline */ .chroma .cm { color: #999988; font-style: italic }
-/* CommentSingle */ .chroma .c1 { color: #999988; font-style: italic }
-/* CommentSpecial */ .chroma .cs { color: #999999; font-weight: bold; font-style: italic }
-/* CommentPreproc */ .chroma .cp { color: #999999; font-weight: bold; font-style: italic }
-/* CommentPreprocFile */ .chroma .cpf { color: #999999; font-weight: bold; font-style: italic }
+/* Comment */ .chroma .c { color: #767676; font-style: italic }
+/* CommentHashbang */ .chroma .ch { color: #767676; font-style: italic }
+/* CommentMultiline */ .chroma .cm { color: #767676; font-style: italic }
+/* CommentSingle */ .chroma .c1 { color: #767676; font-style: italic }
+/* CommentSpecial */ .chroma .cs { color: #767676; font-weight: bold; font-style: italic }
+/* CommentPreproc */ .chroma .cp { color: #767676; font-weight: bold; font-style: italic }
+/* CommentPreprocFile */ .chroma .cpf { color: #767676; font-weight: bold; font-style: italic }
 /* Generic */ .chroma .g {  }
 /* GenericDeleted */ .chroma .gd { color: #000000; background-color: #ffdddd }
 /* GenericEmph */ .chroma .ge { color: #000000; font-style: italic }
 /* GenericError */ .chroma .gr { color: #aa0000 }
-/* GenericHeading */ .chroma .gh { color: #999999 }
+/* GenericHeading */ .chroma .gh { color: #767676 }
 /* GenericInserted */ .chroma .gi { color: #000000; background-color: #ddffdd }
 /* GenericOutput */ .chroma .go { color: #888888 }
 /* GenericPrompt */ .chroma .gp { color: #555555 }
