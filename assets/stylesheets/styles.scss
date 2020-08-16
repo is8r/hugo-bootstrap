@@ -233,9 +233,9 @@ mark {
 
   a {
     @include font(0.75rem, 1);
-    min-width: 48px;
+    margin: 0 -0.4rem;
+    padding: 0.5rem 0.4rem;
     display: inline-block;
-    text-align: center;
   }
 }
 
@@ -251,10 +251,12 @@ mark {
 }
 
 .widget {
-  h5 {
+  h5, .h5 {
     font-size: 0.75rem;
     color: $color-gray;
-
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    
     a {
       @include font(0.75rem, 1.8);
       color: $color-gray;
@@ -378,7 +380,7 @@ mark {
 .footer {
   @include font(0.75rem, 1);
   color: $color-gray;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .emojify {
