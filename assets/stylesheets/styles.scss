@@ -233,6 +233,9 @@ mark {
 
   a {
     @include font(0.75rem, 1);
+    min-width: 48px;
+    display: inline-block;
+    text-align: center;
   }
 }
 
@@ -366,7 +369,7 @@ mark {
     flex: 1 0 auto;
     margin: 0 0.5rem;
   }
-  
+
   .next {
     text-align: right;
   }
