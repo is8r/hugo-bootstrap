@@ -8,7 +8,9 @@
 
 @import "styles/shortcode/card";
 @import "styles/shortcode/blockquote";
+
 @import "styles/components/search-modal";
+@import "styles/components/body";
 
 // basic styles
 
@@ -46,13 +48,13 @@ p > code {
 
 // p {
 a {
-  color: $color-blue;
+  color: $color-black;
   text-decoration: underline;
   margin: 0 -0.2rem;
   padding: 0.5rem 0.2rem;
 
   &:hover {
-    color: lighten($color-blue, 15%);
+    color: $color-blue;
   }
 
   &:focus,
@@ -68,6 +70,15 @@ a {
 
 mark {
   background-color: #fcff41;
+}
+
+.link-sm {
+  @include font(0.75rem);
+  color: $color-gray;
+
+  &:hover {
+    color: $color-blue;
+  }
 }
 
 .btn {
@@ -91,13 +102,7 @@ mark {
 
 .header {
   a {
-    @include font(1rem);
-    color: $color-black;
-
-    &:hover {
-      color: $color-blue;
-      text-decoration: none;
-    }
+    @include font(1rem, 0);
   }
 }
 
@@ -130,157 +135,36 @@ mark {
   }
 }
 
-.body {
-  $margin-block: 2rem;
-  @include word-break;
-  margin-bottom: $margin-block;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 1rem;
-  }
-
-  p,
-  a {
-    @include font(0.9125rem, 1.8);
-  }
-
-  hr {
-    margin-top: $margin-block + 1rem;
-    margin-bottom: $margin-block + 1rem;
-  }
-
-  .highlight + h1,
-  .highlight + h2,
-  .highlight + h3,
-  .highlight + h4,
-  .highlight + h5,
-  .highlight + h6,
-  ul + h1,
-  ul + h2,
-  ul + h3,
-  ul + h4,
-  ul + h5,
-  ul + h6,
-  ol + h1,
-  ol + h2,
-  ol + h3,
-  ol + h4,
-  ol + h5,
-  ol + h6,
-  pre + h1,
-  pre + h2,
-  pre + h3,
-  pre + h4,
-  pre + h5,
-  pre + h6,
-  blockquote + h1,
-  blockquote + h2,
-  blockquote + h3,
-  blockquote + h4,
-  blockquote + h5,
-  blockquote + h6,
-  table + h1,
-  table + h2,
-  table + h3,
-  table + h4,
-  table + h5,
-  table + h6,
-  p + h1,
-  p + h2,
-  p + h3,
-  p + h4,
-  p + h5,
-  p + h6 {
-    margin-top: $margin-block;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  pre {
-    border: 1px solid #ddd;
-  }
-
-  pre,
-  .highlight > * {
-    padding: 1rem 1.5rem;
-  }
-
-  .footnotes {
-    margin-top: $margin-block;
-    margin-bottom: $margin-block;
-
-    p {
-      @include font(0.75rem, 1.8);
-      a {
-        @include font(0.75rem, 1.8);
-      }
-    }
-
-    hr {
-      margin-bottom: 1rem;
-      border: 0;
-      border-top: 1px solid #eee;
-    }
-  }
-}
-
 .info {
   @include font(0.75rem, 1);
-  color: $color-gray;
-  padding-bottom: 1rem;
 
   a {
-    @include font(0.75rem, 1);
-    margin: 0 -0.4rem;
-    padding: 0.5rem 0.4rem;
-    display: inline-block;
+    @extend .link-sm;
   }
 }
 
-.widget {
-  h5,
-  .h5 {
-    font-size: 0.75rem;
+.title-sm {
+  font-size: 0.75rem;
+  color: $color-gray;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+
+  a {
+    @extend .link-sm;
+  }
+}
+
+.links {
+  margin-left: 1rem;
+  padding: 0;
+
+  li {
+    @include font(0.75rem, 1.5);
     color: $color-gray;
-    margin-bottom: 0.5rem;
-    display: inline-block;
+    padding: 0.2rem 0;
 
     a {
-      @include font(0.75rem, 1.8);
-      color: $color-gray;
-      text-decoration: none;
-
-      &:hover {
-        color: $color-blue;
-        text-decoration: underline;
-      }
-    }
-  }
-
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      @include font(0.75rem, 1.8);
-      color: $color-gray;
-
-      a {
-        @include font(0.875rem, 1.8);
-        color: $color-black;
-
-        &:hover {
-          color: $color-blue;
-        }
-      }
+      @include font(0.875rem, 1.5);
     }
   }
 }
@@ -328,47 +212,9 @@ mark {
       }
 
       a {
-        @include font(0.75rem);
-        color: $color-blue;
+        @extend .link-sm;
       }
     }
-  }
-}
-
-.related {
-  padding: 1rem 0;
-
-  ul {
-    margin: -0.5rem;
-    line-height: 1;
-
-    li {
-      display: inline-block;
-      margin: 0.5rem;
-      line-height: 1;
-
-      a {
-        @extend .btn-outline;
-      }
-    }
-  }
-}
-
-.nextback {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 0 -0.5rem 1rem;
-
-  .prev,
-  .next {
-    @extend .btn-outline;
-    flex: 1 0 auto;
-    margin: 0 0.5rem;
-  }
-
-  .next {
-    text-align: right;
   }
 }
 

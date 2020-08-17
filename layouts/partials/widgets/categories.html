@@ -1,10 +1,10 @@
 {{ if isset .Site.Taxonomies "categories" }}
 {{ if not (eq (len .Site.Taxonomies.categories) 0) }}
-<div class="widget">
-  <h5>
+<div>
+  <span class="title-sm">
     <a href="/categories/">Categories</a>
-  </h5>
-  <ul>
+  </span>
+  <ul class="links">
     {{ range $name, $items := .Site.Taxonomies.categories }}
     <li><a href="{{ $.Site.BaseURL }}categories/{{ $name | urlize | lower }}" title="{{ $name }}">{{ $name }}</a> <span class="count">({{ len $items }})</span></li>
     {{ end }}

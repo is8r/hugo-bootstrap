@@ -7711,132 +7711,6 @@ necessary:
     overflow: hidden;
     text-overflow: ellipsis; }
 
-html {
-  font-size: 100%;
-  -webkit-scroll-behavior: smooth;
-  scroll-behavior: smooth; }
-
-body {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 1rem;
-  color: #444; }
-
-a,
-button,
-input,
-select,
-td,
-li {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 1rem; }
-
-label,
-legend {
-  margin: 0; }
-
-li > code,
-td > code,
-p > code {
-  color: #be3600;
-  background-color: rgba(190, 54, 0, 0.05); }
-
-a {
-  color: #00819e;
-  text-decoration: underline;
-  margin: 0 -0.2rem;
-  padding: 0.5rem 0.2rem; }
-  a:hover {
-    color: #00bfeb; }
-  a:focus, a:active {
-    outline: 3px solid rgba(82, 158, 246, 0.2); }
-  a.no-underline {
-    text-decoration: none; }
-
-mark {
-  background-color: #fcff41; }
-
-.btn {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  box-sizing: border-box;
-  display: inline-block;
-  background-color: transparent;
-  background-image: none;
-  border: 0;
-  outline: 0;
-  margin: 0;
-  padding: 0;
-  color: initial;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid #00819e;
-  background-color: #00819e;
-  color: #fff;
-  padding: 1rem;
-  line-height: 1; }
-  .btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active {
-    text-decoration: none; }
-  .btn:active {
-    outline: 3px solid rgba(82, 158, 246, 0.2); }
-  .btn:disabled {
-    cursor: default;
-    pointer-events: none;
-    opacity: 0.2; }
-  .btn:focus {
-    background-color: #00819e; }
-  .btn:hover, .btn:active, .btn.is-current {
-    color: #fff;
-    background-color: #00576b;
-    border-color: #00576b; }
-
-.btn-outline, .related ul li a, .nextback .prev,
-.nextback .next {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 1rem;
-  display: inline-block;
-  border: 1px solid #ccc;
-  padding: 1rem;
-  color: #444;
-  text-decoration: none; }
-  .btn-outline:hover, .related ul li a:hover, .nextback .prev:hover,
-  .nextback .next:hover {
-    text-decoration: none;
-    color: #00819e;
-    border-color: #00819e; }
-
-.header a {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 1rem;
-  color: #444; }
-  .header a:hover {
-    color: #00819e;
-    text-decoration: none; }
-
-.entries.is-home {
-  margin-top: -0.5rem; }
-
-.entries article {
-  padding-bottom: 2rem; }
-  .entries article h1,
-  .entries article h1 a {
-    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-    font-size: 2rem;
-    line-height: 1.8; }
-  .entries article a {
-    color: #00819e; }
-
-.entry > h1,
-.entry > h1 a {
-  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-  font-size: 2rem;
-  line-height: 1.8; }
-
-.entry > hr {
-  margin: 3rem 0; }
-
 .body {
   white-space: normal;
   word-break: break-all;
@@ -7923,54 +7797,158 @@ mark {
       border: 0;
       border-top: 1px solid #eee; }
 
+html {
+  font-size: 100%;
+  -webkit-scroll-behavior: smooth;
+  scroll-behavior: smooth; }
+
+body {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 1rem;
+  color: #444; }
+
+a,
+button,
+input,
+select,
+td,
+li {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 1rem; }
+
+label,
+legend {
+  margin: 0; }
+
+li > code,
+td > code,
+p > code {
+  color: #be3600;
+  background-color: rgba(190, 54, 0, 0.05); }
+
+a {
+  color: #444;
+  text-decoration: underline;
+  margin: 0 -0.2rem;
+  padding: 0.5rem 0.2rem; }
+  a:hover {
+    color: #00819e; }
+  a:focus, a:active {
+    outline: 3px solid rgba(82, 158, 246, 0.2); }
+  a.no-underline {
+    text-decoration: none; }
+
+mark {
+  background-color: #fcff41; }
+
+.link-sm, .info a, .title-sm a, .breadcrumbs ol li a {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 0.75rem;
+  color: #767676; }
+  .link-sm:hover, .info a:hover, .title-sm a:hover, .breadcrumbs ol li a:hover {
+    color: #00819e; }
+
+.btn {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  outline: 0;
+  margin: 0;
+  padding: 0;
+  color: initial;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #00819e;
+  background-color: #00819e;
+  color: #fff;
+  padding: 1rem;
+  line-height: 1; }
+  .btn:link, .btn:visited, .btn:hover, .btn:focus, .btn:active {
+    text-decoration: none; }
+  .btn:active {
+    outline: 3px solid rgba(82, 158, 246, 0.2); }
+  .btn:disabled {
+    cursor: default;
+    pointer-events: none;
+    opacity: 0.2; }
+  .btn:focus {
+    background-color: #00819e; }
+  .btn:hover, .btn:active, .btn.is-current {
+    color: #fff;
+    background-color: #00576b;
+    border-color: #00576b; }
+
+.btn-outline {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 1rem;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: #444;
+  text-decoration: none; }
+  .btn-outline:hover {
+    text-decoration: none;
+    color: #00819e;
+    border-color: #00819e; }
+
+.header a {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 1rem;
+  line-height: 0; }
+
+.entries.is-home {
+  margin-top: -0.5rem; }
+
+.entries article {
+  padding-bottom: 2rem; }
+  .entries article h1,
+  .entries article h1 a {
+    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+    font-size: 2rem;
+    line-height: 1.8; }
+  .entries article a {
+    color: #00819e; }
+
+.entry > h1,
+.entry > h1 a {
+  font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
+  font-size: 2rem;
+  line-height: 1.8; }
+
+.entry > hr {
+  margin: 3rem 0; }
+
 .info {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
   font-size: 0.75rem;
-  line-height: 1;
-  color: #767676;
-  padding-bottom: 1rem; }
-  .info a {
-    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-    font-size: 0.75rem;
-    line-height: 1;
-    margin: 0 -0.4rem;
-    padding: 0.5rem 0.4rem;
-    display: inline-block; }
+  line-height: 1; }
 
-.widget h5,
-.widget .h5 {
+.title-sm {
   font-size: 0.75rem;
   color: #767676;
   margin-bottom: 0.5rem;
   display: inline-block; }
-  .widget h5 a,
-  .widget .h5 a {
-    font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-    font-size: 0.75rem;
-    line-height: 1.8;
-    color: #767676;
-    text-decoration: none; }
-    .widget h5 a:hover,
-    .widget .h5 a:hover {
-      color: #00819e;
-      text-decoration: underline; }
 
-.widget ul {
-  list-style: none;
-  margin: 0;
+.links {
+  margin-left: 1rem;
   padding: 0; }
-  .widget ul li {
+  .links li {
     font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
     font-size: 0.75rem;
-    line-height: 1.8;
-    color: #767676; }
-    .widget ul li a {
+    line-height: 1.5;
+    color: #767676;
+    padding: 0.2rem 0; }
+    .links li a {
       font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
       font-size: 0.875rem;
-      line-height: 1.8;
-      color: #444; }
-      .widget ul li a:hover {
-        color: #00819e; }
+      line-height: 1.5; }
 
 .pagination {
   list-style: none;
@@ -8003,32 +7981,6 @@ mark {
         content: ">"; }
       .breadcrumbs ol li:first-child:before {
         display: none; }
-      .breadcrumbs ol li a {
-        font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;
-        font-size: 0.75rem;
-        color: #00819e; }
-
-.related {
-  padding: 1rem 0; }
-  .related ul {
-    margin: -0.5rem;
-    line-height: 1; }
-    .related ul li {
-      display: inline-block;
-      margin: 0.5rem;
-      line-height: 1; }
-
-.nextback {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
-  margin: 0 -0.5rem 1rem; }
-  .nextback .prev,
-  .nextback .next {
-    flex: 1 0 auto;
-    margin: 0 0.5rem; }
-  .nextback .next {
-    text-align: right; }
 
 .footer {
   font-family: YuGothic, "游ゴシック", -apple-system, BlinkMacSystemFont, Helvetica Neue, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ ProN W3, Arial, メイリオ, Meiryo, Osaka, sans-serif;

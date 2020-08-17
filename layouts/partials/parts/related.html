@@ -2,13 +2,13 @@
 
 {{ if ne (len $related) 1 }}
 {{ with $related }}
-<div class="widget related">
-	<span class="h5">Related posts</span>
-	<ul>
+<div class="mt-5">
+	<span class="title-sm">Related posts</span>
+	<ul class="links">
 		{{ range . }}
-			{{ if ne (len .Title) 0 }}
-			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-			{{ end }}
+		{{ if ne (len .Title) 0 }}
+		<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+		{{ end }}
 		{{ end }}
 	</ul>
 </div>
