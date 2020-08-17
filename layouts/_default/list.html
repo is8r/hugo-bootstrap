@@ -4,10 +4,10 @@
   {{ range sort .Paginator.Pages }}
   {{ if .Title }}
   <article>
-    <h1><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} <small>::Draft</small> {{ end }}</h1>
+    <h1 class="mb-0"><a href="{{ .Permalink }}">{{ .Title }}</a>{{ if .Draft }} <small>::Draft</small> {{ end }}</h1>
     {{ partial "parts/info" . }}
 
-    <p>
+    <p class="mt-3">
       {{ .Summary | plainify | safeHTML }}
 
       {{ if .Truncated }}

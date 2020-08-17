@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<section class="btn-group">
+  {{ range sort .Paginator.Pages }}
+  {{ if .Title }}
+  <a href="{{ .Permalink }}" class="btn-outline">{{ .Title }}</a>
+  {{ end }}
+  {{ end }}
+</section>
+
+{{ partial "parts/pagenator" . }}
+
+{{ end }}
