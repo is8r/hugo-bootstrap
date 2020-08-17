@@ -1,7 +1,7 @@
 import $ from "jquery";
 import lunr from "lunr";
 
-export default class HugoSearch {
+export default class {
   constructor() {
     this.searchOverlay = document.querySelector(".search-form");
     this.searchButton = document.getElementById("search-button");

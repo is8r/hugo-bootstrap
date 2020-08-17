@@ -55,6 +55,7 @@ a {
     color: lighten($color-blue, 15%);
   }
 
+  &:focus,
   &:active {
     outline: $outline-active;
   }
@@ -104,7 +105,7 @@ mark {
   &.is-home {
     margin-top: -0.5rem;
   }
-  
+
   article {
     padding-bottom: 2rem;
 
@@ -243,24 +244,14 @@ mark {
   }
 }
 
-.sidebar {
-  position: sticky;
-  top: 1rem;
-
-  .widget {
-    + .widget {
-      margin-top: 2rem;
-    }
-  }
-}
-
 .widget {
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 0.75rem;
     color: $color-gray;
     margin-bottom: 0.5rem;
     display: inline-block;
-    
+
     a {
       @include font(0.75rem, 1.8);
       color: $color-gray;
@@ -392,4 +383,107 @@ mark {
     Segoe UI Symbol, Android Emoji, EmojiSymbols;
   font-size: 2rem;
   vertical-align: middle;
+}
+
+$menu-widht: 260px;
+@include media-breakpoint-down(sm) {
+  .menu-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#fff, 0.5);
+    z-index: 997;
+    display: none;
+    cursor: pointer;
+  }
+
+  .menu-trigger {
+    $r: 48px;
+    z-index: 997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: $transition;
+    cursor: pointer;
+
+    &:focus {
+      outline: $outline-active;
+    }
+
+    label {
+      @include button-base;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: $r;
+      height: $r;
+      background-color: #fff;
+      border-bottom-right-radius: 0.5rem;
+      // box-shadow: 0 2px 10px 4px rgba(#000, 0.1);
+
+      .icon {
+        @include background-map-svg($map-svg-bars);
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+
+  .menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-$menu-widht);
+    transition: $transition;
+    width: $menu-widht;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    overflow: auto;
+
+    &__inner {
+      padding: 2rem;
+    }
+  }
+
+  body {
+    padding-top: 40px;
+    transition: $transition;
+  }
+
+  body.open {
+    margin-right: -$menu-widht;
+    padding-left: $menu-widht;
+    overflow: hidden;
+
+    .menu-cover {
+      display: block;
+    }
+    .menu-trigger {
+      left: $menu-widht;
+      label {
+        .icon {
+          @include background-map-svg($map-svg-close);
+        }
+      }
+    }
+    .menu-content {
+      transform: translateX(0px);
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .menu-trigger {
+    display: none;
+  }
+  .menu-content {
+    position: sticky;
+    top: 1rem;
+    left: 0;
+  }
 }

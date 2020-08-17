@@ -1,16 +1,29 @@
 {{ partial "head" . }}
 
+<span class="menu-cover">
+</span>
+<span class="menu-trigger hidden-md-up">
+  <input id="menu-button" type="checkbox" />
+  <label for="menu-button">
+    <i class="icon"></i>
+  </label>
+</span>
+
 <div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-12 col-md-3">
-      {{ partial "header" . }}
+      <div class="menu-content">
+        <div class="menu-content__inner">
+          {{ partial "header" . }}
 
-      {{ partial "sidebar" . }}
+          {{ partial "sidebar" . }}
+        </div>
+      </div>
     </div>
 
     <div class="col-12 col-md-9">
       {{ if eq .IsHome false }}
-        {{ partial "parts/breadcrumbs" . }}
+      {{ partial "parts/breadcrumbs" . }}
       {{ end }}
 
       {{ block "main" . }}
