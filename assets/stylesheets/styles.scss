@@ -306,6 +306,7 @@ $menu-widht: 260px;
     margin-right: -$menu-widht;
     padding-left: $menu-widht;
     overflow: hidden;
+    height: 100%;
 
     .menu-cover {
       display: block;

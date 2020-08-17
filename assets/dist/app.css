@@ -8074,7 +8074,8 @@ mark {
   body.open {
     margin-right: -260px;
     padding-left: 260px;
-    overflow: hidden; }
+    overflow: hidden;
+    height: 100%; }
     body.open .menu-cover {
       display: block; }
     body.open .menu-trigger {
