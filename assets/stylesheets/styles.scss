@@ -50,8 +50,8 @@ p > code {
 a {
   color: $color-black;
   text-decoration: underline;
-  margin: 0 -0.2rem;
-  padding: 0.5rem 0.2rem;
+  // margin: 0 -0.2rem;
+  // padding: 0.5rem 0.2rem;
 
   &:hover {
     color: $color-blue;
@@ -70,6 +70,11 @@ a {
 
 mark {
   background-color: #fcff41;
+}
+
+.link-mobile-friendly {
+  margin: 0 -0.5rem;
+  padding: 0.5rem 0.5rem;
 }
 
 .link-sm {

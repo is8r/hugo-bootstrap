@@ -16,6 +16,11 @@
   a {
     @include font(0.9125rem, 1.8);
   }
+  
+  a {
+    @include font(0.9125rem, 1.8);
+    @extend .link-mobile-friendly;
+  }
 
   hr {
     margin-top: $margin-block + 1rem;
