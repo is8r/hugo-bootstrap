@@ -316,9 +316,9 @@ $menu-widht: 260px;
   body.open {
     margin-right: -$menu-widht;
     padding-left: $menu-widht;
-    position: relative;
     overflow: hidden;
     height: 100%;
+    position: fixed;
 
     .menu-cover {
       display: block;
