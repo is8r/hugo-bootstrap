@@ -16,7 +16,7 @@
   a {
     @include font(0.9125rem, 1.8);
   }
-  
+
   a {
     @include font(0.9125rem, 1.8);
     @extend .link-mobile-friendly;
@@ -76,13 +76,43 @@
     max-width: 100%;
   }
 
+  table {
+    border: 1px solid #eee;
+    width: 100%;
+    
+    th,
+    td {
+      padding: 0.5rem 1rem;
+    }
+
+    thead {
+      tr {
+        font-size: 0.75rem;
+        color: $color-gray;
+      }
+    }
+    tbody {
+      tr {
+        border-top: 1px solid #eee;
+      }
+    }
+  }
+
+  li > code,
+  td > code,
+  p > code {
+    color: #be3600;
+    background-color: #fff2ed;
+  }
+
   pre {
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
   }
 
   pre,
   .highlight > * {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.2rem;
+    font-size: 0.8125rem;
   }
 
   .footnotes {

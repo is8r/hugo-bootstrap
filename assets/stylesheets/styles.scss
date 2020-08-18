@@ -8,10 +8,10 @@
 // Optional
 @import "~bootstrap/scss/root";
 @import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/grid";
 @import "~bootstrap/scss/dropdown";
 @import "~bootstrap/scss/modal";
-@import "~bootstrap/scss/containers";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/utilities/api";
 
@@ -55,19 +55,9 @@ legend {
   margin: 0;
 }
 
-li > code,
-td > code,
-p > code {
-  color: #be3600;
-  background-color: rgba(#be3600, 0.05);
-}
-
-// p {
 a {
   color: $color-black;
   text-decoration: underline;
-  // margin: 0 -0.2rem;
-  // padding: 0.5rem 0.2rem;
 
   &:hover {
     color: $color-blue;
@@ -82,15 +72,14 @@ a {
     text-decoration: none;
   }
 }
-// }
 
 mark {
   background-color: #fcff41;
 }
 
 .link-mobile-friendly {
-  margin: -1rem;
-  padding: 1rem;
+  margin: -1.2rem;
+  padding: 1.2rem;
   
   &:focus,
   &:active {
@@ -136,6 +125,8 @@ mark {
     border-color: $color-blue;
   }
 }
+
+//
 
 .header {
   a {
@@ -185,7 +176,7 @@ mark {
   li {
     @include font(0.75rem, 1.5);
     color: $color-gray;
-    // padding: 0.2rem 0;
+    padding: 0.2rem 0;
 
     a {
       @include font(0.875rem, 1.5);
@@ -256,7 +247,7 @@ mark {
 }
 
 $menu-widht: 260px;
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
   .menu-cover {
     position: fixed;
     top: 0;
@@ -292,7 +283,6 @@ $menu-widht: 260px;
       height: $r;
       background-color: #fff;
       border-bottom-right-radius: 0.5rem;
-      // box-shadow: 0 2px 10px 4px rgba(#000, 0.1);
 
       .icon {
         @include background-map-svg($map-svg-bars);
