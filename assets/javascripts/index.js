@@ -1,6 +1,6 @@
 import "../stylesheets/styles.scss";
 
-import bootstrap from "bootstrap";
+import { Modal, Dropdown } from "bootstrap";
 import HugoSearch from "./classes/HugoSearch";
 
 document.addEventListener("DOMContentLoaded", () => {
