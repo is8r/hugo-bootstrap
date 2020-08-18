@@ -67,10 +67,20 @@ $ npm run build
 
 ---
 
-シンタックスのカラーの変更:
+シンタックスのカラーの変更方法:
 
 https://xyproto.github.io/splash/docs/longer/all.html で良さそうなのを探して以下を実行
 
 ```
 $ hugo gen chromastyles --style=github > ./assets/stylesheets/styles/imports/syntax.css
+```
+
+---
+
+archivesの使い方:
+
+記事のFront Matterに以下を追加
+
+```
+archives = ["2020/08"]
 ```

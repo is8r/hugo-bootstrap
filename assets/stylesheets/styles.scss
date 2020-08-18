@@ -89,8 +89,8 @@ mark {
 }
 
 .link-mobile-friendly {
-  margin: 0 -0.5rem;
-  padding: 1rem 0.5rem;
+  margin: -1rem;
+  padding: 1rem;
   
   &:focus,
   &:active {
@@ -154,9 +154,6 @@ mark {
     h1,
     h1 a {
       @include font(2rem, 1.8);
-    }
-    a {
-      color: $color-blue;
     }
   }
 }
