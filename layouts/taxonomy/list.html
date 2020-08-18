@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section class="btn-group">
+<section>
   {{ range sort .Paginator.Pages }}
   {{ if .Title }}
   <a href="{{ .Permalink }}" class="btn-outline">{{ .Title }}</a>

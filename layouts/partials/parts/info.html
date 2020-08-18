@@ -1,4 +1,4 @@
-<div class="info">
+<p class="info">
   <a href="/archives/{{ .Date.Format "2006/01" }}">{{ .Date.Format "2006-01-02" }}</a>
 
   {{ if .Params.categories }}
@@ -12,4 +12,4 @@
   <a href="/tags/{{ . | urlize }}/">#{{ . }}</a>
   {{ end }}
   {{ end }}
-</div>
+</p>
