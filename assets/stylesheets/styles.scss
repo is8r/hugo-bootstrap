@@ -91,6 +91,11 @@ mark {
 .link-mobile-friendly {
   margin: 0 -0.5rem;
   padding: 1rem 0.5rem;
+  
+  &:focus,
+  &:active {
+    outline: none;
+  }
 }
 
 .link-sm {
@@ -99,6 +104,17 @@ mark {
 
   &:hover {
     color: $color-blue;
+  }
+}
+
+.title-sm {
+  font-size: 0.75rem;
+  color: $color-gray;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+
+  a {
+    @extend .link-sm;
   }
 }
 
@@ -118,17 +134,6 @@ mark {
     text-decoration: none;
     color: $color-blue;
     border-color: $color-blue;
-  }
-}
-
-.btn-group {
-  $m: 0.2rem;
-  display: flex;
-  flex-wrap: wrap;
-  margin: -$m;
-  
-  .btn-outline {
-    margin: $m;
   }
 }
 
@@ -172,17 +177,7 @@ mark {
 
   a {
     @extend .link-sm;
-  }
-}
-
-.title-sm {
-  font-size: 0.75rem;
-  color: $color-gray;
-  margin-bottom: 0.5rem;
-  display: inline-block;
-
-  a {
-    @extend .link-sm;
+    @extend .link-mobile-friendly;
   }
 }
 
@@ -193,7 +188,7 @@ mark {
   li {
     @include font(0.75rem, 1.5);
     color: $color-gray;
-    padding: 0.2rem 0;
+    // padding: 0.2rem 0;
 
     a {
       @include font(0.875rem, 1.5);
