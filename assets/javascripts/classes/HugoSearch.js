@@ -1,4 +1,4 @@
-import $ from "jquery";
+// import $ from "jquery";
 import lunr from "lunr";
 
 export default class {
@@ -57,13 +57,13 @@ export default class {
   }
 
   initModal() {
-    $("#search").on("shown.bs.modal", function () {
-      $("#search-input").trigger("focus");
-    });
-    $("#search").on("hidden.bs.modal", function () {
-      $("#search-input").val("");
-      $("#search-results")[0].innerHTML = "";
-    });
+    // $("#search").on("shown.bs.modal", function () {
+    //   $("#search-input").trigger("focus");
+    // });
+    // $("#search").on("hidden.bs.modal", function () {
+    //   $("#search-input").val("");
+    //   $("#search-results")[0].innerHTML = "";
+    // });
   }
 
   initLunr() {
