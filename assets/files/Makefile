@@ -3,22 +3,20 @@
 
 up:
 	open http://localhost:1313; \
-	cd exampleSite; \
-	hugo server -D \
-	--themesDir ../../ \
-	--config ../assets/files/config.toml
+	hugo server -D --watch
 
 dev:
+	cd ./themes/hugo-bootstrap;\
 	yarn install;\
-	yarn run dev
+	yarn dev
 
 build:
-	yarn run build; \
-	cd exampleSite; \
+	cd ./themes/hugo-bootstrap;\
+	yarn install;\
+	yarn build;\
+	cd ../../;\
 	hugo \
-	--themesDir ../../ \
-	--config ../assets/files/config.toml \
-	--minify
+	--minify \
 
 setup:
-	cp ./assets/files/content/search.adoc ./exampleSite/content/search.adoc; \
+	cp ./themes/hugo-bootstrap/assets/files/content/search.adoc ./content/search.adoc; \
