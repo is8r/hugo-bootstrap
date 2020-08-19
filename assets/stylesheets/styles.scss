@@ -111,6 +111,11 @@ mark {
   @include button;
 }
 
+.btn-base {
+  @include button-base;
+  padding: 0.2rem 1rem;
+}
+
 .btn-outline {
   @include font(1rem);
   display: inline-block;

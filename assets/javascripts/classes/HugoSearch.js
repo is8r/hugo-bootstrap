@@ -7,7 +7,8 @@ export default class {
     this.searchButton = document.getElementById("search-button");
     this.searchInput = document.getElementById("search-input");
     this.closeSearch = document.getElementById("close-search");
-    this.searchInput = document.getElementById("search-input");
+    this.searchModal = document.getElementById("search");
+    this.searchResults = document.querySelector("#search-results");
 
     this.init();
   }
@@ -57,13 +58,14 @@ export default class {
   }
 
   initModal() {
-    // $("#search").on("shown.bs.modal", function () {
-    //   $("#search-input").trigger("focus");
-    // });
-    // $("#search").on("hidden.bs.modal", function () {
-    //   $("#search-input").val("");
-    //   $("#search-results")[0].innerHTML = "";
-    // });
+    const scope = this;
+    this.searchModal.addEventListener("shown.bs.modal", function () {
+      scope.searchInput.focus();
+    });
+    this.searchModal.addEventListener("hidden.bs.modal", function () {
+      scope.searchResults.innerHTML = "";
+      scope.searchInput.value = "";
+    });
   }
 
   initLunr() {
@@ -95,10 +97,10 @@ export default class {
   }
 
   displayResults(results) {
-    var searchResults = document.querySelector("#search-results");
+    this.searchResults = document.querySelector("#search-results");
     // var inputVal = document.querySelector('#search-input').value;
     if (results.length) {
-      searchResults.innerHTML = "";
+      this.searchResults.innerHTML = "";
       results.forEach(result => {
         var item = this.searchData[result.ref];
         // var section = item.section.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
@@ -109,8 +111,9 @@ export default class {
           '">' +
           item.title +
           "</a></h5><p>" +
-          item.summary +
+          item.content +
           "</p>";
+        console.log(item);
         // appendString += '<div class=\"in-section\">In: ' + section + '</div><ul class=\"tags\">';
         // appendString += '<ul class=\"tags\">';
         // var tags = '';
@@ -118,7 +121,9 @@ export default class {
         //   appendString += '<li><a href=\"/tags/' + item.tags[i] + '\" class=\"tag\">' + item.tags[i] + '</a> ';
         // }
         appendString += "</ul></li>";
-        searchResults.innerHTML += appendString;
+        if (item.content) {
+          this.searchResults.innerHTML += appendString;
+        }
       });
     }
   }
