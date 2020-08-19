@@ -1,19 +1,21 @@
+{{ $base := .Params.BaseURL }}
+
 <div class="info">
   {{ if .Params.archives }}
-  <a href="{{ .BaseURL }}/archives/{{ .Date.Format "2006/01" }}">{{ .Date.Format "2006-01-02" }}</a>
+  <a href="{{ $base }}/archives/{{ .Date.Format "2006/01" }}">{{ .Date.Format "2006-01-02" }}</a>
   {{ else }}
   <span>{{ .Date.Format "2006-01-02" }}</span>
   {{ end }}
   
   {{ if .Params.categories }}
   {{ range .Params.categories }}
-  <a href="/categories/{{ . | urlize | absURL }}/">#{{ . }}</a>
+  <a href="{{ $base }}/categories/{{ . | urlize }}/">#{{ . }}</a>
   {{ end }}
   {{ end }}
 
   {{ if .Params.tags }}
   {{ range .Params.tags }}
-  <a href="/tags/{{ . | urlize | absURL }}/">#{{ . }}</a>
+  <a href="{{ $base }}/tags/{{ . | urlize }}/">#{{ . }}</a>
   {{ end }}
   {{ end }}
 </div>
