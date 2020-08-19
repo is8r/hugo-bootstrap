@@ -20,3 +20,4 @@ build:
 
 setup:
 	cp ./themes/hugo-bootstrap/assets/files/content/search.adoc ./content/search.adoc; \
+	cp ./themes/hugo-bootstrap/assets/files/config.toml config.toml; \

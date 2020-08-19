@@ -8,6 +8,8 @@
 $ hugo new site xxx && cd xxx
 $ git submodule add git@github.com:is8r/hugo-bootstrap.git themes/hugo-bootstrap
 $ cp themes/hugo-bootstrap/assets/files/Makefile Makefile
+$ make setup
+$ hugo new posts/my-first-post.md
 ```
 
 ## 開発
