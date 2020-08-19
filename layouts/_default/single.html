@@ -1,14 +1,18 @@
 {{ define "main" }}
 
 <div class="entry {{ .Params.class }}">
-  <h1>{{ .Title }}</h1>
+  <h1 class="mb-0">{{ .Title }}</h1>
   {{ partial "parts/info" . }}
 
-  <div class="body">
+  <div class="body mt-4">
     {{ .Content }}
   </div>
 
-  {{ partial "widgets/related" . }}
+  <div class="mt-5">
+    {{ partial "parts/nextback" . }}
+
+    {{ partial "parts/related" . }}
+  </div>
 </div>
 
 {{ end }}

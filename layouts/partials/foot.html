@@ -9,7 +9,11 @@
   }(document, 'script', 'facebook-jssdk'));</script>
   {{ end }}
 
-  <script src="{{ .Site.BaseURL }}app.js"></script>
+  {{ if or .Params.math .Site.Params.math }}
+  {{ partial "imports/math.html" . }}
+  {{ end }}
+  {{ partial "imports/embedJs" . }}
+  {{ partial "parts/search-modal" . }}
 
   </body>
 </html>

@@ -1,9 +1,13 @@
-<section class="nextback">
+<section class="mt-5 d-flex justify-content-between">
   {{ with .PrevInSection }}
-    <a class="prev" href="{{.Permalink}}">前の仕事:  {{.Title}}</a>
+  {{ if ne .Title "" }}
+    <a class="btn-outline flex-grow-1 flex-shrink-1 mr-1" href="{{.Permalink}}">&lt; {{.Title}}</a>
+  {{ end }}
   {{ end }}
 
   {{ with .NextInSection }}
-    <a class="next" href="{{.Permalink}}">次の仕事:  {{.Title}}</a>
+  {{ if ne .Title "" }}
+    <a class="btn-outline flex-grow-1 flex-shrink-1 text-right ml-1" href="{{.Permalink}}">{{.Title}} &gt;</a>
+  {{ end }}
   {{ end }}
 </section>

@@ -3,17 +3,7 @@
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
 
-  {{ if .Site.Params.GoogleAnalyticsId }}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.GoogleAnalyticsId }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', '{{ .Site.Params.GoogleAnalyticsId }}');
-  </script>
-  {{ end }}
+  {{ template "_internal/google_analytics_async.html" . }}
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,10 +19,9 @@
   <meta name="keywords" content="{{ .Site.Params.Keywords }}" />
   <link rel="canonical" href="{{ .Permalink }}" />
 
-  {{ if .RSSLink }}
-  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
-  <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-  {{ end }}
+  {{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+  {{ end -}}
 
   <!-- OGP -->
   {{ if eq .IsHome false }}
@@ -80,8 +69,7 @@
   <link rel="apple-touch-icon" href="{{ .Site.Params.ImageAppleTouchIcon }}">
   {{ end }}
 
-  <link rel="stylesheet" href="{{ .Site.BaseURL }}app.css">
-
+  {{ partial "imports/embedCss" . }}
 </head>
 
 <body>

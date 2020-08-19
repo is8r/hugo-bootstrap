@@ -1,9 +1,10 @@
-import '../stylesheets/styles.scss';
+import "../stylesheets/styles.scss";
 
-import $ from 'jquery'
-import bootstrap from 'bootstrap'
-import HugoSearch from './classes/HugoSearch'
+import { Modal, Dropdown } from "bootstrap";
+import HugoSearch from "./classes/HugoSearch";
+import Hamburger from "./classes/Hamburger";
 
-$(function() {
-  var hugoSearch = new HugoSearch()
+document.addEventListener("DOMContentLoaded", () => {
+  new HugoSearch();
+  new Hamburger();
 });

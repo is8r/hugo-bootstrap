@@ -1,0 +1,18 @@
+{{ if not (eq (len .Site.Pages) 0) }}
+<div>
+  <span class="title-sm">
+    <a href="/posts/">Recents</a>
+  </span>
+  <ul class="links">
+    {{ range first 5 .Site.RegularPages.ByDate.Reverse }}
+    {{ if not (eq .Permalink "/posts/") }}
+    {{ if not (eq (len .Title) 0) }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

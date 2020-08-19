@@ -1,0 +1,12 @@
+{{ if and (not (eq (len .Site.Pages) 1) ) (not (eq (len .Site.Taxonomies.archives) 0)) }}
+<div>
+  <span class="title-sm">
+    <a href="/archives/">Archives</a>
+  </span>
+  <ul class="links">
+    {{ range $items := .Site.Taxonomies.archives.Alphabetical.Reverse }}
+    <li><a href="{{ $.Site.BaseURL }}archives/{{ .Name | urlize | lower }}">{{ .Name }}</a> <span>({{ .Count }})</span></li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

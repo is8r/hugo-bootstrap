@@ -1,0 +1,47 @@
+baseURL = "https://hugo-bootstrap.12px.com/"
+languageCode = "ja"
+title = "Hugo Bootstrap"
+theme = "hugo-bootstrap"
+copyright = "© Hugo Bootstrap"
+pygmentsUseClasses = true
+# disableKinds = ["page", "home", "section", "taxonomy", "term", "RSS", "sitemap", "robotsTXT", "404"]
+enableEmoji = true
+googleAnalytics = ""
+publishDir = "public"
+
+[params]
+  description = "description"
+  keywords = "keywords"
+  favicon = "/favicon.ico"
+  imageOgp = "/images/og.png"
+  imageAppleTouchIcon = "/images/apple-touch-icon.png"
+  fbAppId = ""
+  twitterId = ""
+  math = false
+
+[permalinks]
+  posts = "/posts/:year/:month/:title/"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  archive = "archives"
+  series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[related]
+	threshold = 1
+	[[related.indices]]
+	  name = "keywords"
+	  weight = 200
+	[[related.indices]]
+	  name  = "tags"
+	  weight = 100
+	[[related.indices]]
+    name  = "date"
+    weight = 1
+    pattern = "2006"

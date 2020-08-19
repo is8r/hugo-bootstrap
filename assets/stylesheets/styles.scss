@@ -1,13 +1,32 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
+
+// Required
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// Optional
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/dropdown";
+@import "~bootstrap/scss/modal";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/utilities/api";
+
 @import "~spuit/spuit";
+
+@import "styles/imports/syntax";
 
 @import "styles/config/variables";
 @import "styles/config/mixins";
-@import "styles/imports/syntax";
 
 @import "styles/shortcode/card";
 @import "styles/shortcode/blockquote";
+
 @import "styles/components/search-modal";
+@import "styles/components/body";
 
 // basic styles
 
@@ -28,7 +47,7 @@ input,
 select,
 td,
 li {
-  @include font(1rem);
+  @include font(1rem, 1.8);
 }
 
 label,
@@ -37,15 +56,14 @@ legend {
 }
 
 a {
-  color: $color-blue;
+  color: $color-black;
   text-decoration: underline;
-  margin: 0 -0.2rem;
-  padding: 0.5rem 0.2rem;
 
   &:hover {
-    color: lighten($color-blue, 15%);
+    color: $color-blue;
   }
 
+  &:focus,
   &:active {
     outline: $outline-active;
   }
@@ -59,23 +77,73 @@ mark {
   background-color: #fcff41;
 }
 
+.link-mobile-friendly {
+  margin: -1.2rem;
+  padding: 1.2rem;
+  
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.link-sm {
+  @include font(0.75rem);
+  color: $color-gray;
+
+  &:hover {
+    color: $color-blue;
+  }
+}
+
+.title-sm {
+  font-size: 0.75rem;
+  color: $color-gray;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+
+  a {
+    @extend .link-sm;
+  }
+}
+
 .btn {
   @include button;
 }
 
+.btn-base {
+  @include button-base;
+  padding: 0.2rem 1rem;
+}
+
+.btn-outline {
+  @include font(1rem);
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  color: $color-black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-blue;
+    border-color: $color-blue;
+  }
+}
+
+//
+
 .header {
   a {
-    @include font(1rem);
-    color: $color-black;
-
-    &:hover {
-      color: $color-blue;
-      text-decoration: none;
-    }
+    @include font(1rem, 0);
   }
 }
 
 .entries {
+  &.is-home {
+    margin-top: -0.5rem;
+  }
+
   article {
     padding-bottom: 2rem;
 
@@ -83,173 +151,59 @@ mark {
     h1 a {
       @include font(2rem, 1.8);
     }
-    a {
-      color: $color-blue;
-    }
   }
 }
 
 .entry {
-  h1,
-  h1 a {
+  > h1,
+  > h1 a {
     @include font(2rem, 1.8);
   }
-  a {
-    color: $color-blue;
-  }
-}
 
-.body {
-  $margin-block: 2rem;
-  @include word-break;
-  margin-bottom: $margin-block;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-bottom: 1rem;
-  }
-
-  p,
-  a {
-    @include font(0.9125rem, 1.8);
-  }
-
-  .highlight + h1,
-  .highlight + h2,
-  .highlight + h3,
-  .highlight + h4,
-  .highlight + h5,
-  .highlight + h6,
-  ul + h1,
-  ul + h2,
-  ul + h3,
-  ul + h4,
-  ul + h5,
-  ul + h6,
-  ol + h1,
-  ol + h2,
-  ol + h3,
-  ol + h4,
-  ol + h5,
-  ol + h6,
-  pre + h1,
-  pre + h2,
-  pre + h3,
-  pre + h4,
-  pre + h5,
-  pre + h6,
-  blockquote + h1,
-  blockquote + h2,
-  blockquote + h3,
-  blockquote + h4,
-  blockquote + h5,
-  blockquote + h6,
-  table + h1,
-  table + h2,
-  table + h3,
-  table + h4,
-  table + h5,
-  table + h6,
-  p + h1,
-  p + h2,
-  p + h3,
-  p + h4,
-  p + h5,
-  p + h6 {
-    margin-top: $margin-block;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  pre {
-    border: 1px solid #ddd;
-  }
-
-  pre,
-  .highlight > * {
-    padding: 1rem 1.5rem;
-  }
-
-  .footnotes {
-    margin-top: $margin-block;
-    margin-bottom: $margin-block;
-
-    hr {
-      margin-top: 0;
-      padding-top: 0;
-      border: 0;
-      border-top: 1px solid #eee;
-    }
+  > hr {
+    margin: 3rem 0;
   }
 }
 
 .info {
   @include font(0.75rem, 1);
-  color: $color-gray;
-  padding-bottom: 1rem;
 
   a {
-    @include font(0.75rem, 1);
+    @extend .link-sm;
+    @include font(0.8rem, 1);
+    // @extend .link-mobile-friendly;
   }
 }
 
-.sidebar {
-  position: sticky;
-  top: 1rem;
-  
-  .widget {
-    + .widget {
-      margin-top: 2rem;
-    }
-  }
-}
+.links {
+  margin-left: 1rem;
+  padding: 0;
 
-.widget {
-  h5 {
-    font-size: 0.75rem;
+  li {
+    @include font(0.75rem, 1.5);
     color: $color-gray;
-  }
+    padding: 0.2rem 0;
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      @include font(0.75rem, 1.8);
-      color: $color-gray;
-
-      a {
-        @include font(0.875rem, 1.8);
-        color: $color-black;
-
-        &:hover {
-          color: $color-blue;
-        }
-      }
+    a {
+      @include font(0.875rem, 1.5);
     }
   }
 }
 
-.pagenator {
-  text-align: center;
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    li {
-      display: inline-block;
-      padding: 0 0.5rem;
-      a {
-        @include font(1rem, 1);
-        color: $color-blue;
-      }
+.pagination {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+
+  .page-item {
+    display: inline-block;
+
+    .page-link {
+      @include font(1rem, 1);
+      color: $color-blue;
+      border: 0;
+      background-color: transparent;
     }
   }
 }
@@ -279,49 +233,8 @@ mark {
       }
 
       a {
-        @include font(0.75rem);
-        color: $color-blue;
+        @extend .link-sm;
       }
-    }
-  }
-}
-
-.related {
-  padding: 1rem 0;
-
-  ul {
-    margin: -0.5rem;
-    line-height: 1;
-
-    li {
-      display: inline-block;
-      margin: 0.5rem;
-      line-height: 1;
-
-      a {
-        display: inline-block;
-        border: 1px solid #eee;
-        padding: 1rem;
-
-        &:hover {
-          text-decoration: none;
-          border-color: $color-blue;
-        }
-      }
-    }
-  }
-}
-
-.nextback {
-  > a {
-    display: block;
-    border: 1px solid #eee;
-    padding: 1rem;
-    margin-bottom: 1rem;
-
-    &:hover {
-      text-decoration: none;
-      border-color: $color-blue;
     }
   }
 }
@@ -329,11 +242,116 @@ mark {
 .footer {
   @include font(0.75rem, 1);
   color: $color-gray;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .emojify {
-  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji, Segoe UI Symbol, Android Emoji, EmojiSymbols;
+  font-family: Apple Color Emoji, Segoe UI Emoji, NotoColorEmoji,
+    Segoe UI Symbol, Android Emoji, EmojiSymbols;
   font-size: 2rem;
   vertical-align: middle;
+}
+
+$menu-widht: 260px;
+@include media-breakpoint-down(md) {
+  .menu-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#fff, 0.5);
+    z-index: 997;
+    display: none;
+    cursor: pointer;
+  }
+
+  .menu-trigger {
+    $r: 48px;
+    z-index: 997;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: $transition;
+    cursor: pointer;
+
+    &:focus {
+      outline: $outline-active;
+    }
+
+    label {
+      @include button-base;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      width: $r;
+      height: $r;
+      background-color: #fff;
+      border-bottom-right-radius: 0.5rem;
+
+      .icon {
+        @include background-map-svg($map-svg-bars);
+      }
+    }
+
+    input[type="checkbox"] {
+      display: none;
+    }
+  }
+
+  .menu-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translateX(-$menu-widht);
+    transition: $transition;
+    width: $menu-widht;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 999;
+    overflow: auto;
+
+    &__inner {
+      padding: 2rem;
+    }
+  }
+
+  body {
+    padding-top: 40px;
+    transition: $transition;
+  }
+
+  body.open {
+    margin-right: -$menu-widht;
+    padding-left: $menu-widht;
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+
+    .menu-cover {
+      display: block;
+    }
+    .menu-trigger {
+      left: $menu-widht;
+      label {
+        .icon {
+          @include background-map-svg($map-svg-close);
+        }
+      }
+    }
+    .menu-content {
+      transform: translateX(0px);
+    }
+  }
+}
+@include media-breakpoint-up(md) {
+  .menu-trigger {
+    display: none;
+  }
+  .menu-content {
+    position: sticky;
+    top: 1rem;
+    left: 0;
+  }
 }

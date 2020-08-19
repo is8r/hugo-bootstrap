@@ -1,50 +1,37 @@
 const path = require('path');
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  context: path.resolve(__dirname, '../assets'),
+  context: path.resolve(__dirname, "../assets"),
   entry: {
-    app: ['./javascripts/index.js']
+    app: ["./javascripts/index.js"],
   },
   output: {
-    path: path.resolve(__dirname, '../static')
+    path: path.resolve(__dirname, "../assets/dist"),
   },
-  // devServer: {
-  //   contentBase: path.join(__dirname, '../static'),
-  //   watchContentBase: true
-  // },
   module: {
     rules: [
       {
         test: /\.(css|scss)$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
+          "css-loader",
           {
-            loader: 'postcss-loader'
+            loader: "postcss-loader",
           },
           {
-            loader: 'sass-loader'
-          }
-        ]
+            loader: "sass-loader",
+          },
+        ],
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
-      }
-    ]
+        use: "babel-loader",
+      },
+    ],
   },
   plugins: [
-    new MiniCssExtractPlugin()
-    // new HtmlWebpackPlugin({
-    //   template: './html/index.ejs',
-    //   minify: {
-    //     removeComments: true,
-    //     collapseWhitespace: true,
-    //     removeAttributeQuotes: true
-    //   }
-    // })
-  ]
-}
+    new MiniCssExtractPlugin(),
+  ],
+};
