@@ -165,6 +165,7 @@ mark {
 
   a {
     @extend .link-sm;
+    @include font(0.8rem, 1);
     // @extend .link-mobile-friendly;
   }
 }
