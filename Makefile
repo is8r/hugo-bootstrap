@@ -19,6 +19,7 @@ build:
 	--themesDir ../../ \
 	--config ../assets/files/config.toml \
 	--minify
+	git add -A && git commit -a -m 'Build'; \
 
 setup:
 	cp ./assets/files/content/search.adoc ./exampleSite/content/search.adoc; \
