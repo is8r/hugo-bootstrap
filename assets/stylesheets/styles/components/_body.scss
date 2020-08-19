@@ -19,7 +19,7 @@
 
   a {
     @include font(0.9125rem, 1.8);
-    @extend .link-mobile-friendly;
+    // @extend .link-mobile-friendly;
   }
 
   hr {
@@ -76,10 +76,16 @@
     max-width: 100%;
   }
 
+  .s_instagram_simple {
+    a {
+      border: 0 !important;
+    }
+  }
+  
   table {
     border: 1px solid #eee;
     width: 100%;
-    
+
     th,
     td {
       padding: 0.5rem 1rem;
